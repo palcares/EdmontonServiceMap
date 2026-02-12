@@ -389,6 +389,28 @@ function createPopupHTML(service) {
       '</a>';
   }
 
+  var operatorHTML = '';
+  if (service.operator) {
+    operatorHTML = '<div class="popup-row popup-operator">' +
+      '<span style="font-style:italic;color:#6b7280;font-size:0.78rem">' + service.operator + '</span>' +
+    '</div>';
+  }
+
+  var descHTML = '';
+  if (service.description) {
+    descHTML = '<div class="popup-row popup-desc">' +
+      '<span style="font-size:0.82rem;color:#4b5563;line-height:1.4">' + service.description + '</span>' +
+    '</div>';
+  }
+
+  var entryHTML = '';
+  if (service.entryPoint) {
+    entryHTML = '<div class="popup-row">' +
+      icon('phone', 16) +
+      '<span>Access via: ' + service.entryPoint + '</span>' +
+    '</div>';
+  }
+
   return (
     '<div class="map-popup">' +
       '<div class="popup-accent-bar" style="background:' + accColor + '"></div>' +
@@ -396,8 +418,10 @@ function createPopupHTML(service) {
         '<h3 class="popup-name">' + service.name + '</h3>' +
         '<span class="popup-badge ' + badgeClass + '">' + badgeText + '</span>' +
       '</div>' +
+      operatorHTML +
       pilotHTML +
       '<div class="popup-body">' +
+        descHTML +
         (service.address
           ? '<div class="popup-row">' +
               icon('pin', 16) +
@@ -414,6 +438,7 @@ function createPopupHTML(service) {
               '<span>' + serves + '</span>' +
             '</div>'
           : '') +
+        entryHTML +
         transportHTML +
         phoneHTML +
         '<div class="popup-access" style="border-left-color: ' + accColor + '">' +
@@ -713,9 +738,13 @@ function buildSheetCard(svc) {
     distHTML = '<span class="sheet-card-distance">' + formatDistance(dist) + '</span>';
   }
 
-  var pilotBadge = svc.pilotProgram
-    ? '<span class="sheet-card-badge badge-pilot">Pilot</span>'
-    : '';
+  var pilotBadge = '';
+  if (svc.pilotProgram) {
+    var endDate = svc.pilotEndDate
+      ? new Date(svc.pilotEndDate).toLocaleDateString('en-CA', { month: 'short', year: 'numeric' })
+      : 'TBD';
+    pilotBadge = '<span class="sheet-card-badge badge-pilot">Pilot \u2014 ' + endDate + '</span>';
+  }
 
   // Type badge
   var typeBadge = '';
@@ -737,6 +766,17 @@ function buildSheetCard(svc) {
       icon('phone', 16) + ' Call</a>';
   }
 
+  // Description snippet (truncated)
+  var descHTML = '';
+  if (svc.description) {
+    descHTML = '<div class="sheet-card-desc">' + svc.description + '</div>';
+  }
+
+  // Serves info
+  var serves = formatServes(svc.serves);
+  var servesHTML = serves
+    ? '<span class="sheet-card-serves">' + icon('users', 10) + ' ' + serves + '</span>' : '';
+
   return '<div class="sheet-card" data-id="' + svc.id + '">' +
     '<div class="sheet-card-accent" style="background:' + accColor + '"></div>' +
     '<div class="sheet-card-body">' +
@@ -747,7 +787,8 @@ function buildSheetCard(svc) {
         pilotBadge +
         '<span class="sheet-card-badge ' + badgeClass + '">' + badgeText + '</span>' +
       '</div>' +
-      '<div class="sheet-card-info">' + hours + distHTML + '</div>' +
+      descHTML +
+      '<div class="sheet-card-info">' + hours + servesHTML + distHTML + '</div>' +
     '</div>' +
     '<div class="sheet-card-actions">' +
       phoneBtn +

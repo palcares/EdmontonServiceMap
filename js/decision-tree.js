@@ -655,6 +655,37 @@ function buildServiceCard(svc, idx) {
     }
   }
 
+  // Operator
+  var operatorHTML = '';
+  if (svc.operator) {
+    operatorHTML = '<div class="svc-operator">' + svc.operator + '</div>';
+  }
+
+  // Description
+  var descriptionHTML = '';
+  if (svc.description) {
+    descriptionHTML = '<div class="svc-description">' + svc.description + '</div>';
+  }
+
+  // Who they serve
+  var serves = formatServes(svc.serves);
+  var servesHTML = '';
+  if (serves) {
+    servesHTML = '<div class="svc-serves-row">' + icon('users', 14) + ' <span>' + serves + '</span></div>';
+  }
+
+  // Coverage area (for mobile teams)
+  var coverageHTML = '';
+  if (svc.isMobile && svc.coverageArea) {
+    coverageHTML = '<div class="svc-coverage-row">' + icon('layers', 14) + ' <span>Coverage: ' + svc.coverageArea + '</span></div>';
+  }
+
+  // Entry point
+  var entryHTML = '';
+  if (svc.entryPoint) {
+    entryHTML = '<div class="svc-entry-row">' + icon('phone', 14) + ' <span>Access via: ' + svc.entryPoint + '</span></div>';
+  }
+
   return '<div class="svc-card" style="animation-delay:' + delay + '">' +
     '<div class="svc-card-accent" style="background:' + accColor + '"></div>' +
     '<div class="svc-card-content">' +
@@ -662,10 +693,15 @@ function buildServiceCard(svc, idx) {
         '<div class="svc-name">' + (svc.shortName || svc.name) + verifyHTML + '</div>' +
         '<span class="svc-badge ' + badgeClass + '">' + badgeText + '</span>' +
       '</div>' +
+      operatorHTML +
       '<div class="svc-card-badges">' + typeBadgeHTML + transportBadgeHTML + '</div>' +
       pilotHTML +
+      descriptionHTML +
       '<div class="svc-row">' + icon('clock', 14) + '<span>' + hours + '</span></div>' +
       addressHTML +
+      servesHTML +
+      coverageHTML +
+      entryHTML +
       phoneHTML +
       transportHTML +
       '<div class="svc-access-label" style="color: ' + accColor + '">' + accLabel + '</div>' +

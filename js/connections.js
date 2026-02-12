@@ -198,19 +198,43 @@ function buildConnCard(svc, type) {
       : '<span class="svc-unverified">' + icon('alertTri', 12) + '</span>';
   }
 
+  var operatorHTML = svc.operator
+    ? '<div class="conn-card-operator">' + svc.operator + '</div>' : '';
+
+  var descHTML = svc.description
+    ? '<div class="conn-card-desc">' + svc.description + '</div>' : '';
+
+  var pilotHTML = '';
+  if (svc.pilotProgram) {
+    var endDate = svc.pilotEndDate
+      ? new Date(svc.pilotEndDate).toLocaleDateString('en-CA', { month: 'short', year: 'numeric' })
+      : 'TBD';
+    pilotHTML = '<div class="svc-pilot">' + icon('alertTri', 14) +
+      ' Pilot \u2014 funded until ' + endDate + '</div>';
+  }
+
+  var transportBadge = '';
+  if (svc.transport) {
+    transportBadge = '<span class="conn-badge transport-badge-yes">' + icon('truck', 10) + ' Transports</span>';
+  }
+
   return '<div class="conn-card" data-id="' + svc.id + '">' +
     '<div class="conn-card-accent" style="background:' + accColor + '"></div>' +
     '<div class="conn-card-body">' +
       '<div class="conn-card-top">' +
         '<span class="conn-card-name">' + (svc.shortName || svc.name) + verifyIcon + '</span>' +
+        transportBadge +
         '<span class="conn-status-badge ' + badgeClass + '">' + badgeText + '</span>' +
       '</div>' +
+      operatorHTML +
       '<div class="conn-card-meta">' +
         icon('clock', 12) + ' ' + hours +
         (svc.address ? ' \u00b7 ' + icon('pin', 12) + ' ' + svc.address : '') +
       '</div>' +
       (serves ? '<div class="conn-card-serves">' + icon('users', 12) + ' ' + serves + '</div>' : '') +
+      pilotHTML +
       '<div class="conn-card-details">' +
+        descHTML +
         phoneHTML +
         '<div class="conn-access-bar" style="border-color:' + accColor + '">' +
           getAccessibilityLabel(svc.accessibility) +
@@ -239,6 +263,25 @@ function buildConnCardMobile(svc) {
     phoneHTML = '<a href="tel:' + tel + '" class="conn-phone-cta">' + icon('phone', 14) + ' ' + svc.phone + '</a>';
   }
 
+  var operatorHTML = svc.operator
+    ? '<div class="conn-card-operator">' + svc.operator + '</div>' : '';
+
+  var descHTML = svc.description
+    ? '<div class="conn-card-desc">' + svc.description + '</div>' : '';
+
+  var serves = formatServes(svc.serves);
+  var servesHTML = serves
+    ? '<div class="conn-card-serves">' + icon('users', 12) + ' ' + serves + '</div>' : '';
+
+  var pilotHTML = '';
+  if (svc.pilotProgram) {
+    var endDate = svc.pilotEndDate
+      ? new Date(svc.pilotEndDate).toLocaleDateString('en-CA', { month: 'short', year: 'numeric' })
+      : 'TBD';
+    pilotHTML = '<div class="svc-pilot">' + icon('alertTri', 14) +
+      ' Pilot \u2014 funded until ' + endDate + '</div>';
+  }
+
   // Show child services
   var childHTML = '';
   if (svc.childServices && svc.childServices.length > 0) {
@@ -246,10 +289,15 @@ function buildConnCardMobile(svc) {
     if (children.length > 0) {
       childHTML = '<div class="conn-children">' +
         children.map(function(child) {
+          var childOpen = isServiceOpen(child);
+          var childBadge = childOpen ? '<span class="conn-badge badge-open" style="font-size:10px">Open</span>' : '<span class="conn-badge badge-closed" style="font-size:10px">Closed</span>';
           var childTransport = child.transportNotes ? ' \u2014 ' + child.transportNotes : '';
+          var childServes = formatServes(child.serves);
           return '<div class="conn-child-item">' +
-            '<span class="conn-child-name">' + (child.shortName || child.name) + '</span>' +
-            '<span class="conn-child-info">' + childTransport + '</span>' +
+            '<span class="conn-child-name">' + (child.shortName || child.name) + ' ' + childBadge + '</span>' +
+            (childServes ? '<span class="conn-child-info">' + icon('users', 10) + ' ' + childServes + '</span>' : '') +
+            (childTransport ? '<span class="conn-child-info">' + icon('truck', 10) + childTransport + '</span>' : '') +
+            (child.description ? '<span class="conn-child-info">' + child.description + '</span>' : '') +
           '</div>';
         }).join('') +
       '</div>';
@@ -271,12 +319,16 @@ function buildConnCardMobile(svc) {
         transportBadge +
         '<span class="conn-status-badge ' + badgeClass + '">' + badgeText + '</span>' +
       '</div>' +
+      operatorHTML +
       '<div class="conn-card-meta">' +
         icon('clock', 12) + ' ' + hours +
-        ' \u00b7 ' + (svc.entryPoint || 'direct') +
-        ' \u00b7 ' + (svc.coverageArea || 'local') +
+        ' \u00b7 ' + icon('phone', 12) + ' ' + (svc.entryPoint || 'direct') +
+        ' \u00b7 ' + icon('layers', 12) + ' ' + (svc.coverageArea || 'local') +
       '</div>' +
+      servesHTML +
+      pilotHTML +
       '<div class="conn-card-details">' +
+        descHTML +
         phoneHTML +
         childHTML +
       '</div>' +
@@ -297,6 +349,16 @@ function buildConnCardTransport(svc) {
     phoneHTML = '<a href="tel:' + tel + '" class="conn-phone-cta">' + icon('phone', 14) + ' ' + svc.phone + '</a>';
   }
 
+  var operatorHTML = svc.operator
+    ? '<div class="conn-card-operator">' + svc.operator + '</div>' : '';
+
+  var serves = formatServes(svc.serves);
+  var servesRow = serves
+    ? '<div class="conn-transport-row"><strong>Serves:</strong> ' + serves + '</div>' : '';
+
+  var coverageRow = svc.coverageArea
+    ? '<div class="conn-transport-row"><strong>Coverage:</strong> ' + svc.coverageArea + '</div>' : '';
+
   // Aggregated child van info for CDT
   var vanInfo = '';
   if (svc.childServices && svc.childServices.length > 0) {
@@ -308,6 +370,9 @@ function buildConnCardTransport(svc) {
     }
   }
 
+  var descHTML = svc.description
+    ? '<div class="conn-card-desc">' + svc.description + '</div>' : '';
+
   return '<div class="conn-card conn-card-transport" data-id="' + svc.id + '">' +
     '<div class="conn-card-accent" style="background:var(--green)"></div>' +
     '<div class="conn-card-body">' +
@@ -315,11 +380,15 @@ function buildConnCardTransport(svc) {
         '<span class="conn-card-name">' + icon('truck', 14) + ' ' + (svc.shortName || svc.name) + '</span>' +
         '<span class="conn-status-badge ' + badgeClass + '">' + badgeText + '</span>' +
       '</div>' +
+      operatorHTML +
+      descHTML +
       '<div class="conn-transport-grid">' +
         '<div class="conn-transport-row"><strong>Transports?</strong> <span class="transport-yes-text">YES</span></div>' +
         '<div class="conn-transport-row"><strong>Where to:</strong> ' + (svc.transportNotes || 'Various locations') + '</div>' +
         '<div class="conn-transport-row"><strong>How to request:</strong> ' + (svc.entryPoint || 'Direct') + (svc.phone ? ' \u2014 ' + svc.phone : '') + '</div>' +
         '<div class="conn-transport-row"><strong>Hours:</strong> ' + hours + '</div>' +
+        servesRow +
+        coverageRow +
         (svc.referralRequired ? '<div class="conn-transport-row"><strong>Restriction:</strong> Referral required</div>' : '') +
         (svc.pilotProgram ? '<div class="conn-transport-row conn-pilot-note">' + icon('alertTri', 12) + ' Pilot program' + (svc.pilotEndDate ? ' \u2014 until ' + new Date(svc.pilotEndDate).toLocaleDateString('en-CA', { month: 'short', year: 'numeric' }) : '') + '</div>' : '') +
       '</div>' +
