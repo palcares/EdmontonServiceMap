@@ -746,7 +746,8 @@ button:active, .option-card:active, .filter-pill:active, .sheet-card:active {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  flex: 1;
+  flex: 0 1 auto;
+  max-width: 200px;
 }
 .sheet-card-badge {
   padding: 2px 8px;
@@ -759,9 +760,10 @@ button:active, .option-card:active, .filter-pill:active, .sheet-card:active {
 .sheet-card-info {
   font-size: var(--text-xs);
   color: var(--text-muted);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
 }
 .sheet-card-distance {
   font-size: var(--text-xs);
@@ -2295,17 +2297,17 @@ button:active, .option-card:active, .filter-pill:active, .sheet-card:active {
 
 @media (min-width: 768px) {
   .app-header {
-    padding: var(--sp-4) var(--sp-6);
+    padding: var(--sp-3) var(--sp-6);
   }
   .app-header h1 {
     font-size: var(--text-base);
-    letter-spacing: 0.02em;
+    letter-spacing: 0.04em;
   }
   .app-header .subtitle {
     display: inline;
     font-size: var(--text-sm);
-    opacity: 0.7;
-    margin-left: var(--sp-3);
+    opacity: 0.75;
+    margin-left: var(--sp-4);
     font-weight: 400;
     text-transform: none;
     letter-spacing: 0;
@@ -2313,7 +2315,7 @@ button:active, .option-card:active, .filter-pill:active, .sheet-card:active {
 
   /* Tab bar moves to top on desktop */
   .tab-bar {
-    position: static;
+    position: relative;
     bottom: auto;
     left: auto;
     right: auto;
@@ -2348,10 +2350,13 @@ button:active, .option-card:active, .filter-pill:active, .sheet-card:active {
   }
 
   .tab-content { padding-bottom: 0; }
-  .map-container { height: calc(100dvh - 110px); }
+  .map-container { height: calc(100dvh - 105px); }
 
   .bottom-sheet { max-height: 45vh; }
   .bottom-sheet.peek { max-height: 280px; }
+
+  .sheet-card-name { max-width: 260px; }
+  .sheet-card-desc { -webkit-line-clamp: 1; }
 
   .map-legend { top: var(--sp-5); right: var(--sp-5); }
   .map-locate-btn { top: 80px; left: var(--sp-5); }
