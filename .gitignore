@@ -1,0 +1,10 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Don't deploy reference docs (optional — remove if you want them in repo)
+# docs/
