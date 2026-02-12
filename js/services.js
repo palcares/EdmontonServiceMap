@@ -230,3 +230,149 @@ function getVerificationSummary() {
 function getAllServices() {
   return servicesData;
 }
+
+// ── Category & Tag Formatting ──
+
+function formatCategory(category) {
+  if (!category) return '';
+  var map = {
+    'crisis-response': 'Crisis Response',
+    'mental-health': 'Mental Health',
+    'shelter': 'Shelter',
+    'drop-in': 'Drop-In',
+    'detox': 'Detox',
+    'crisis-stabilization': 'Crisis Stabilization',
+    'healthcare': 'Healthcare',
+    'hospital': 'Hospital',
+    'housing': 'Housing',
+    'transport': 'Transport',
+    'outreach': 'Outreach',
+    'enforcement': 'Enforcement',
+    'encampment': 'Encampment',
+    'navigation': 'Navigation',
+    'bia': 'BIA Patrol'
+  };
+  return map[category] || category.replace(/-/g, ' ').replace(/\b\w/g, function(c) { return c.toUpperCase(); });
+}
+
+function getCategoryClass(category) {
+  if (!category) return 'cat-default';
+  var map = {
+    'crisis-response': 'cat-crisis',
+    'mental-health': 'cat-mental-health',
+    'shelter': 'cat-shelter',
+    'drop-in': 'cat-dropin',
+    'detox': 'cat-detox',
+    'crisis-stabilization': 'cat-crisis',
+    'healthcare': 'cat-healthcare',
+    'hospital': 'cat-hospital',
+    'housing': 'cat-housing',
+    'transport': 'cat-transport',
+    'outreach': 'cat-outreach',
+    'enforcement': 'cat-enforcement',
+    'encampment': 'cat-encampment',
+    'navigation': 'cat-navigation',
+    'bia': 'cat-bia'
+  };
+  return map[category] || 'cat-default';
+}
+
+function formatServiceTag(slug) {
+  if (!slug) return '';
+  var map = {
+    'crisis-response': 'Crisis Response',
+    'wellness-checks': 'Wellness Checks',
+    'transport-to-services': 'Transport',
+    'referral': 'Referral',
+    'harm-reduction': 'Harm Reduction',
+    'emergency-shelter': 'Emergency Shelter',
+    'meals': 'Meals',
+    'case-management': 'Case Management',
+    'drop-in': 'Drop-In',
+    'health-services': 'Health Services',
+    'housing-support': 'Housing Support',
+    'needle-exchange': 'Needle Exchange',
+    'outreach': 'Outreach',
+    'addictions-support': 'Addictions Support',
+    'transit-outreach': 'Transit Outreach',
+    'safety': 'Safety',
+    'transport': 'Transport',
+    'by-law-enforcement': 'By-Law',
+    'encampment-response': 'Encampment Response',
+    'clean-up': 'Clean-Up',
+    'emergency-response': 'Emergency Response',
+    'community-engagement': 'Community Engagement',
+    'navigation': 'Navigation',
+    'medical-care': 'Medical Care',
+    'crisis-intervention': 'Crisis Intervention',
+    'in-home-care': 'In-Home Care',
+    'medical-assessment': 'Medical Assessment',
+    'mental-health': 'Mental Health',
+    'addiction-support': 'Addiction Support',
+    'assessment': 'Assessment',
+    'mental-health-assessment': 'MH Assessment',
+    'mental-health-act-apprehension': 'MH Act',
+    'mental-health-crisis': 'MH Crisis',
+    'medical-transport': 'Medical Transport',
+    'hospital-discharge-support': 'Discharge Support',
+    'warming-shelter': 'Warming Shelter',
+    'accessible-transport': 'Accessible Transit',
+    'safety-patrol': 'Safety Patrol',
+    'detox': 'Detox',
+    'sobering': 'Sobering',
+    'crisis-stabilization': 'Crisis Stabilization',
+    'short-term-residential': 'Short-Term Residential',
+    'permanent-housing': 'Permanent Housing',
+    'cultural-support': 'Cultural Support',
+    'managed-substances': 'Managed Substances',
+    'emergency-medical': 'Emergency Medical',
+    'psychiatric-emergency': 'Psychiatric Emergency',
+    'youth-services': 'Youth Services',
+    'suicide-prevention': 'Suicide Prevention',
+    'mental-health-support': 'MH Support'
+  };
+  return map[slug] || slug.replace(/-/g, ' ').replace(/\b\w/g, function(c) { return c.toUpperCase(); });
+}
+
+function getConnectedServices(service) {
+  if (!service.connections || service.connections.length === 0) return [];
+  return service.connections.map(function(cid) {
+    var s = getServiceById(cid);
+    return s ? { id: s.id, name: s.shortName || s.name } : null;
+  }).filter(Boolean);
+}
+
+function getVerificationInfo(service) {
+  if (!service.verification) return { status: 'unverified', label: 'Unverified', confidence: 'low' };
+  return {
+    status: service.verification.status || 'unverified',
+    label: service.verification.status === 'verified' ? 'Verified' : 'Unverified',
+    confidence: service.verification.confidence || 'low'
+  };
+}
+
+function getPilotDaysRemaining(service) {
+  if (!service.pilotProgram || !service.pilotEndDate) return null;
+  var end = new Date(service.pilotEndDate);
+  var now = getCurrentTime();
+  var diff = Math.ceil((end - now) / (1000 * 60 * 60 * 24));
+  return diff;
+}
+
+function getServicesByOperator() {
+  var groups = {};
+  servicesData.forEach(function(s) {
+    var op = s.operator || 'Unknown';
+    if (!groups[op]) groups[op] = [];
+    groups[op].push(s);
+  });
+  return groups;
+}
+
+function getUniqueCategories() {
+  var cats = {};
+  servicesData.forEach(function(s) {
+    if (s.category) cats[s.category] = true;
+  });
+  return Object.keys(cats).sort();
+}

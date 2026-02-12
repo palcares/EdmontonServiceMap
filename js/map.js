@@ -346,6 +346,13 @@ function createPopupHTML(service) {
   var accLabel = getAccessibilityLabel(service.accessibility);
   var accColor = getAccessibilityColor(service.accessibility);
 
+  // Category badge
+  var catBadge = '';
+  if (service.category) {
+    catBadge = '<span class="popup-cat-badge ' + getCategoryClass(service.category) + '">' +
+      formatCategory(service.category) + '</span>';
+  }
+
   var phoneHTML = '';
   if (service.phone) {
     var tel = getPhoneTel(service.phone);
@@ -355,15 +362,30 @@ function createPopupHTML(service) {
       '</a>';
   }
 
+  // Enhanced pilot warning
   var pilotHTML = '';
   if (service.pilotProgram) {
-    var endDate = service.pilotEndDate
+    var daysLeft = getPilotDaysRemaining(service);
+    var endText = service.pilotEndDate
       ? new Date(service.pilotEndDate).toLocaleDateString('en-CA', { month: 'short', year: 'numeric' })
-      : 'TBD';
+      : 'End date TBD';
+    var urgencyText = '';
+    if (daysLeft !== null && daysLeft <= 60) {
+      urgencyText = ' <strong>(' + daysLeft + ' days remaining)</strong>';
+    }
     pilotHTML =
-      '<div class="popup-pilot">' +
-        icon('alertTri', 14) + ' Pilot program \u2014 funded until ' + endDate +
+      '<div class="popup-pilot popup-pilot-enhanced">' +
+        icon('alertTri', 14) + ' Pilot program \u2014 ' + endText + urgencyText +
       '</div>';
+  }
+
+  // Referral required banner
+  var referralHTML = '';
+  if (service.referralRequired) {
+    referralHTML = '<div class="popup-referral-banner">' +
+      icon('lock', 14) + ' <strong>Referral required</strong>' +
+      (service.accessNotes ? ' \u2014 ' + service.accessNotes : '') +
+    '</div>';
   }
 
   // Transport info row
@@ -376,6 +398,39 @@ function createPopupHTML(service) {
   } else {
     transportHTML = '<div class="popup-transport popup-transport-no">' +
       icon('pin', 14) + ' Drop-off only \u2014 no transport' +
+    '</div>';
+  }
+
+  // Services offered tags
+  var svcTagsHTML = '';
+  if (service.services && service.services.length > 0) {
+    var tags = service.services.slice(0, 5).map(function(s) {
+      return '<span class="popup-svc-tag">' + formatServiceTag(s) + '</span>';
+    }).join('');
+    if (service.services.length > 5) {
+      tags += '<span class="popup-svc-tag popup-svc-tag-more">+' + (service.services.length - 5) + '</span>';
+    }
+    svcTagsHTML = '<div class="popup-svc-tags">' + tags + '</div>';
+  }
+
+  // Coverage description for mobile teams
+  var coverageHTML = '';
+  if (service.isMobile && service.coverageDescription) {
+    coverageHTML = '<div class="popup-row">' +
+      icon('layers', 16) +
+      '<span>' + service.coverageDescription + '</span>' +
+    '</div>';
+  }
+
+  // Related services
+  var relatedHTML = '';
+  var connected = getConnectedServices(service);
+  if (connected.length > 0) {
+    relatedHTML = '<div class="popup-related">' +
+      '<span class="popup-related-label">Related:</span> ' +
+      connected.map(function(c) {
+        return '<span class="popup-related-link" data-id="' + c.id + '">' + c.name + '</span>';
+      }).join('') +
     '</div>';
   }
 
@@ -415,13 +470,18 @@ function createPopupHTML(service) {
     '<div class="map-popup">' +
       '<div class="popup-accent-bar" style="background:' + accColor + '"></div>' +
       '<div class="popup-header">' +
-        '<h3 class="popup-name">' + service.name + '</h3>' +
+        '<div class="popup-header-top">' +
+          '<h3 class="popup-name">' + service.name + '</h3>' +
+          catBadge +
+        '</div>' +
         '<span class="popup-badge ' + badgeClass + '">' + badgeText + '</span>' +
       '</div>' +
       operatorHTML +
+      referralHTML +
       pilotHTML +
       '<div class="popup-body">' +
         descHTML +
+        svcTagsHTML +
         (service.address
           ? '<div class="popup-row">' +
               icon('pin', 16) +
@@ -439,14 +499,16 @@ function createPopupHTML(service) {
             '</div>'
           : '') +
         entryHTML +
+        coverageHTML +
         transportHTML +
         phoneHTML +
         '<div class="popup-access" style="border-left-color: ' + accColor + '">' +
           '<span class="popup-access-label">' + accLabel + '</span>' +
-          (service.accessNotes
+          (service.accessNotes && !service.referralRequired
             ? '<span class="popup-access-notes">' + service.accessNotes + '</span>'
             : '') +
         '</div>' +
+        relatedHTML +
         directionsHTML +
       '</div>' +
     '</div>'
@@ -738,12 +800,22 @@ function buildSheetCard(svc) {
     distHTML = '<span class="sheet-card-distance">' + formatDistance(dist) + '</span>';
   }
 
+  // Enhanced pilot badge
   var pilotBadge = '';
   if (svc.pilotProgram) {
+    var daysLeft = getPilotDaysRemaining(svc);
     var endDate = svc.pilotEndDate
       ? new Date(svc.pilotEndDate).toLocaleDateString('en-CA', { month: 'short', year: 'numeric' })
-      : 'TBD';
-    pilotBadge = '<span class="sheet-card-badge badge-pilot">Pilot \u2014 ' + endDate + '</span>';
+      : 'End date TBD';
+    var urgency = (daysLeft !== null && daysLeft <= 60) ? ' (' + daysLeft + 'd)' : '';
+    pilotBadge = '<span class="sheet-card-badge badge-pilot">Pilot \u2014 ' + endDate + urgency + '</span>';
+  }
+
+  // Category badge (small chip)
+  var catBadge = '';
+  if (svc.category) {
+    catBadge = '<span class="sheet-card-badge sheet-cat-badge ' + getCategoryClass(svc.category) + '">' +
+      formatCategory(svc.category) + '</span>';
   }
 
   // Type badge
@@ -759,6 +831,11 @@ function buildSheetCard(svc) {
     ? '<span class="sheet-card-badge transport-badge-yes">' + icon('truck', 10) + ' Transports</span>'
     : '';
 
+  // Referral badge
+  var referralBadge = svc.referralRequired
+    ? '<span class="sheet-card-badge sheet-referral-badge">' + icon('lock', 10) + ' Referral</span>'
+    : '';
+
   var phoneBtn = '';
   if (svc.phone) {
     var tel = getPhoneTel(svc.phone);
@@ -772,6 +849,18 @@ function buildSheetCard(svc) {
     descHTML = '<div class="sheet-card-desc">' + svc.description + '</div>';
   }
 
+  // Service tags (max 3)
+  var svcTagsHTML = '';
+  if (svc.services && svc.services.length > 0) {
+    var tags = svc.services.slice(0, 3).map(function(s) {
+      return '<span class="sheet-svc-tag">' + formatServiceTag(s) + '</span>';
+    });
+    if (svc.services.length > 3) {
+      tags.push('<span class="sheet-svc-tag sheet-svc-tag-more">+' + (svc.services.length - 3) + '</span>');
+    }
+    svcTagsHTML = '<div class="sheet-card-tags">' + tags.join('') + '</div>';
+  }
+
   // Serves info
   var serves = formatServes(svc.serves);
   var servesHTML = serves
@@ -782,12 +871,15 @@ function buildSheetCard(svc) {
     '<div class="sheet-card-body">' +
       '<div class="sheet-card-top">' +
         '<span class="sheet-card-name">' + (svc.shortName || svc.name) + '</span>' +
+        catBadge +
         typeBadge +
         transportBadge +
+        referralBadge +
         pilotBadge +
         '<span class="sheet-card-badge ' + badgeClass + '">' + badgeText + '</span>' +
       '</div>' +
       descHTML +
+      svcTagsHTML +
       '<div class="sheet-card-info">' + hours + servesHTML + distHTML + '</div>' +
     '</div>' +
     '<div class="sheet-card-actions">' +
