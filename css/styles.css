@@ -2332,7 +2332,8 @@ button:active, .option-card:active, .filter-pill:active, .sheet-card:active {
   }
   .tab-indicator {
     top: 6px;
-    bottom: 6px;
+    bottom: auto;
+    height: calc(100% - 12px);
     border-radius: var(--r-md);
   }
   .tab {
