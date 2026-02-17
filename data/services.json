@@ -5,7 +5,7 @@
     "shortName": "CDT",
     "entryPoint": "211+3",
     "operator": "REACH Edmonton (via Hope Mission & Boyle Street Community Services)",
-    "description": "24/7 mobile crisis response for vulnerable individuals likely to come to harm without intervention. Dispatched through 211 (press 3) operated by CMHA Edmonton. Partnership between REACH Edmonton, Hope Mission, and Boyle Street.",
+    "description": "24/7 mobile crisis response for vulnerable individuals likely to come to harm without intervention. Dispatched through 211 Alberta (press 3). CMHA Edmonton is a key partner. Partnership between REACH Edmonton, Hope Mission, and Boyle Street.",
     "phone": "211 (press 3)",
     "address": null,
     "coordinates": null,
@@ -18,8 +18,17 @@
     },
     "accessibility": "public",
     "accessNotes": "Publicly accessible. Anyone can call 211 press 3 to request a team.",
-    "serves": ["adults", "all-genders"],
-    "services": ["crisis-response", "wellness-checks", "transport-to-services", "referral", "harm-reduction"],
+    "serves": [
+      "adults",
+      "all-genders"
+    ],
+    "services": [
+      "crisis-response",
+      "wellness-checks",
+      "transport-to-services",
+      "referral",
+      "harm-reduction"
+    ],
     "transport": true,
     "transportNotes": "Can transport individuals to shelters, detox, hospitals, and other services. All transport is voluntary.",
     "referralRequired": false,
@@ -27,17 +36,36 @@
     "pilotEndDate": null,
     "status": "active",
     "parentService": null,
-    "childServices": ["hope-mission-cdt", "boyle-street-cdt"],
-    "connections": ["211", "hope-mission", "boyle-street", "eps"],
+    "childServices": [
+      "hope-mission-cdt",
+      "boyle-street-cdt"
+    ],
+    "connections": [
+      "211",
+      "hope-mission",
+      "boyle-street",
+      "eps",
+      "yess",
+      "ambrose-place"
+    ],
     "category": "crisis-response",
-    "tags": ["mobile", "crisis", "transport", "24/7", "non-violent"],
+    "tags": [
+      "mobile",
+      "crisis",
+      "transport",
+      "24/7",
+      "non-violent"
+    ],
     "verification": {
       "status": "unverified",
       "lastVerified": null,
       "verifiedBy": null,
       "confidence": "medium",
       "notes": "Hours and contact info from web research, not confirmed with operator",
-      "fieldsToCheck": ["hours", "phone"]
+      "fieldsToCheck": [
+        "hours",
+        "phone"
+      ]
     }
   },
   {
@@ -59,8 +87,14 @@
     },
     "accessibility": "public",
     "accessNotes": "Dispatched through CDT 211+3 system",
-    "serves": ["adults", "all-genders"],
-    "services": ["crisis-response", "transport-to-services"],
+    "serves": [
+      "adults",
+      "all-genders"
+    ],
+    "services": [
+      "crisis-response",
+      "transport-to-services"
+    ],
     "transport": true,
     "transportNotes": "5 vans (up to 7 day, up to 4 night)",
     "referralRequired": false,
@@ -69,16 +103,28 @@
     "status": "active",
     "parentService": "cdt",
     "childServices": [],
-    "connections": ["cdt", "hope-mission", "211"],
+    "connections": [
+      "cdt",
+      "hope-mission",
+      "211"
+    ],
     "category": "crisis-response",
-    "tags": ["mobile", "crisis", "transport", "24/7"],
+    "tags": [
+      "mobile",
+      "crisis",
+      "transport",
+      "24/7"
+    ],
     "verification": {
       "status": "unverified",
       "lastVerified": null,
       "verifiedBy": null,
       "confidence": "medium",
       "notes": "Van counts and hours from research conversations",
-      "fieldsToCheck": ["transportNotes", "hours"]
+      "fieldsToCheck": [
+        "transportNotes",
+        "hours"
+      ]
     }
   },
   {
@@ -100,8 +146,14 @@
     },
     "accessibility": "public",
     "accessNotes": "Dispatched through CDT 211+3 system",
-    "serves": ["adults", "all-genders"],
-    "services": ["crisis-response", "transport-to-services"],
+    "serves": [
+      "adults",
+      "all-genders"
+    ],
+    "services": [
+      "crisis-response",
+      "transport-to-services"
+    ],
     "transport": true,
     "transportNotes": "6 vans",
     "referralRequired": false,
@@ -110,16 +162,28 @@
     "status": "active",
     "parentService": "cdt",
     "childServices": [],
-    "connections": ["cdt", "boyle-street", "211"],
+    "connections": [
+      "cdt",
+      "boyle-street",
+      "211"
+    ],
     "category": "crisis-response",
-    "tags": ["mobile", "crisis", "transport", "24/7"],
+    "tags": [
+      "mobile",
+      "crisis",
+      "transport",
+      "24/7"
+    ],
     "verification": {
       "status": "unverified",
       "lastVerified": null,
       "verifiedBy": null,
       "confidence": "medium",
       "notes": "Van counts and hours from research conversations",
-      "fieldsToCheck": ["transportNotes", "hours"]
+      "fieldsToCheck": [
+        "transportNotes",
+        "hours"
+      ]
     }
   },
   {
@@ -129,9 +193,12 @@
     "entryPoint": "direct",
     "operator": "Hope Mission",
     "description": "Emergency shelter for adult men. Walk-in intake, meals, basic health services, case management.",
-    "phone": "780-429-3470",
+    "phone": "780-422-2018",
     "address": "10014 105A Avenue NW, Edmonton, AB",
-    "coordinates": [53.5444, -113.5010],
+    "coordinates": [
+      53.5444,
+      -113.501
+    ],
     "isDropOff": true,
     "isMobile": false,
     "coverageArea": null,
@@ -141,8 +208,14 @@
     },
     "accessibility": "public",
     "accessNotes": "Walk-in. Open door intake for adult men.",
-    "serves": ["adult-men"],
-    "services": ["emergency-shelter", "meals", "case-management"],
+    "serves": [
+      "adult-men"
+    ],
+    "services": [
+      "emergency-shelter",
+      "meals",
+      "case-management"
+    ],
     "transport": false,
     "transportNotes": null,
     "referralRequired": false,
@@ -150,17 +223,37 @@
     "pilotEndDate": null,
     "status": "active",
     "parentService": null,
-    "childServices": ["hope-mission-cdt", "uhei", "health-access-mobile", "bus-connect"],
-    "connections": ["cdt", "uhei", "health-access-mobile", "bus-connect"],
+    "childServices": [
+      "hope-mission-cdt",
+      "uhei",
+      "health-access-mobile",
+      "bus-connect"
+    ],
+    "connections": [
+      "cdt",
+      "uhei",
+      "health-access-mobile",
+      "bus-connect",
+      "mustard-seed-central"
+    ],
     "category": "shelter",
-    "tags": ["shelter", "men", "walk-in", "24/7", "meals"],
+    "tags": [
+      "shelter",
+      "men",
+      "walk-in",
+      "24/7",
+      "meals"
+    ],
     "verification": {
       "status": "unverified",
       "lastVerified": null,
       "verifiedBy": null,
-      "confidence": "medium",
-      "notes": "Well-known facility, hours from web research",
-      "fieldsToCheck": ["hours", "phone", "address"]
+      "confidence": "high",
+      "notes": "Phone verified via hopemission.com/locations/edmonton (Feb 2026)",
+      "fieldsToCheck": [
+        "hours",
+        "address"
+      ]
     }
   },
   {
@@ -172,7 +265,10 @@
     "description": "Drop-in centre providing meals, health services, housing support, and community connections for people experiencing homelessness and poverty. Relocated to King Thunderbird Centre in Dec 2025.",
     "phone": "780-424-4106",
     "address": "10010 107A Avenue NW, Edmonton, AB",
-    "coordinates": [53.5480, -113.4990],
+    "coordinates": [
+      53.548,
+      -113.499
+    ],
     "isDropOff": true,
     "isMobile": false,
     "coverageArea": null,
@@ -180,14 +276,40 @@
     "hours": {
       "type": "scheduled",
       "schedule": [
-        {"days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "open": 800, "close": 1600},
-        {"days": ["Saturday", "Sunday"], "open": 900, "close": 1500}
+        {
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "open": 800,
+          "close": 1600
+        },
+        {
+          "days": [
+            "Saturday",
+            "Sunday"
+          ],
+          "open": 900,
+          "close": 1500
+        }
       ]
     },
     "accessibility": "public",
     "accessNotes": "Walk-in during operating hours. No referral needed.",
-    "serves": ["adults", "all-genders"],
-    "services": ["drop-in", "meals", "health-services", "housing-support", "case-management"],
+    "serves": [
+      "adults",
+      "all-genders"
+    ],
+    "services": [
+      "drop-in",
+      "meals",
+      "health-services",
+      "housing-support",
+      "case-management"
+    ],
     "transport": false,
     "transportNotes": null,
     "referralRequired": false,
@@ -195,17 +317,34 @@
     "pilotEndDate": null,
     "status": "active",
     "parentService": null,
-    "childServices": ["boyle-street-cdt", "streetworks", "mobile-outreach-addictions"],
-    "connections": ["cdt", "streetworks", "mobile-outreach-addictions"],
+    "childServices": [
+      "boyle-street-cdt",
+      "streetworks",
+      "mobile-outreach-addictions"
+    ],
+    "connections": [
+      "cdt",
+      "streetworks",
+      "mobile-outreach-addictions"
+    ],
     "category": "drop-in",
-    "tags": ["drop-in", "meals", "walk-in", "health"],
+    "tags": [
+      "drop-in",
+      "meals",
+      "walk-in",
+      "health"
+    ],
     "verification": {
       "status": "unverified",
       "lastVerified": null,
       "verifiedBy": null,
       "confidence": "medium",
       "notes": "Well-known facility, hours from web research",
-      "fieldsToCheck": ["hours", "phone", "address"]
+      "fieldsToCheck": [
+        "hours",
+        "phone",
+        "address"
+      ]
     }
   },
   {
@@ -214,7 +353,7 @@
     "shortName": "UHEI",
     "entryPoint": "211+3",
     "operator": "Hope Mission",
-    "description": "Responds to calls from EPS regarding encampments. Supports closure and transition of individuals to services.",
+    "description": "Responds to calls from EPS regarding encampments. Supports closure and transition of individuals to services. Part of federal UHEI funding ($35M nationally).",
     "phone": "211 (press 3)",
     "address": null,
     "coordinates": null,
@@ -227,8 +366,15 @@
     },
     "accessibility": "restricted",
     "accessNotes": "Responds to EPS calls only. Not publicly dispatched.",
-    "serves": ["adults", "all-genders"],
-    "services": ["encampment-response", "referral", "transport-to-services"],
+    "serves": [
+      "adults",
+      "all-genders"
+    ],
+    "services": [
+      "encampment-response",
+      "referral",
+      "transport-to-services"
+    ],
     "transport": true,
     "transportNotes": "Can transport individuals from encampments to services",
     "referralRequired": true,
@@ -237,16 +383,32 @@
     "status": "active",
     "parentService": "hope-mission",
     "childServices": [],
-    "connections": ["hope-mission", "eps", "cdt"],
+    "connections": [
+      "hope-mission",
+      "eps",
+      "cdt"
+    ],
     "category": "crisis-response",
-    "tags": ["pilot", "encampment", "EPS-only", "transport"],
+    "tags": [
+      "pilot",
+      "encampment",
+      "EPS-only",
+      "transport",
+      "24/7",
+      "mobile"
+    ],
     "verification": {
       "status": "unverified",
       "lastVerified": null,
       "verifiedBy": null,
       "confidence": "medium",
       "notes": "Pilot program — funding and continuation status needs verification",
-      "fieldsToCheck": ["hours", "phone", "status", "pilotEndDate"]
+      "fieldsToCheck": [
+        "hours",
+        "phone",
+        "status",
+        "pilotEndDate"
+      ]
     }
   },
   {
@@ -266,14 +428,32 @@
     "hours": {
       "type": "scheduled",
       "schedule": [
-        {"days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "open": 800, "close": 2000}
+        {
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "open": 800,
+          "close": 2000
+        }
       ],
       "notes": "Contract until end of March 2026"
     },
     "accessibility": "restricted",
     "accessNotes": "Referrals received from RAH Navigators only. Not publicly accessible.",
-    "serves": ["adults", "all-genders"],
-    "services": ["medical-transport", "hospital-discharge-support"],
+    "serves": [
+      "adults",
+      "all-genders"
+    ],
+    "services": [
+      "medical-transport",
+      "hospital-discharge-support"
+    ],
     "transport": true,
     "transportNotes": "Transports from RAH to medical centres and shelters",
     "referralRequired": true,
@@ -282,16 +462,31 @@
     "status": "active",
     "parentService": "hope-mission",
     "childServices": [],
-    "connections": ["hope-mission", "royal-alexandra-hospital"],
+    "connections": [
+      "hope-mission",
+      "royal-alexandra-hospital"
+    ],
     "category": "transport",
-    "tags": ["pilot", "medical-transport", "referral-only", "hospital"],
+    "tags": [
+      "pilot",
+      "medical-transport",
+      "referral-only",
+      "hospital",
+      "mobile"
+    ],
     "verification": {
       "status": "unverified",
       "lastVerified": null,
       "verifiedBy": null,
-      "confidence": "medium",
-      "notes": "Pilot program — funding and continuation status needs verification",
-      "fieldsToCheck": ["hours", "phone", "status", "pilotEndDate"]
+      "confidence": "low",
+      "notes": "UNVERIFIABLE: Zero public web presence (Feb 2026). Name not found on hopemission.com, InformAlberta, 211, or news. May be internal name, defunct pilot, or absorbed into Bridge Healing program. Pilot ends 2026-03-31. NEEDS PHONE CALL: Hope Mission 780-422-2018 to confirm existence.",
+      "fieldsToCheck": [
+        "status",
+        "hours",
+        "phone",
+        "pilotEndDate",
+        "name"
+      ]
     }
   },
   {
@@ -311,7 +506,17 @@
     "hours": {
       "type": "seasonal",
       "schedule": [
-        {"days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "open": 1130, "close": 1930}
+        {
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "open": 1130,
+          "close": 1930
+        }
       ],
       "winterSchedule": {
         "type": "24/7",
@@ -321,8 +526,14 @@
     },
     "accessibility": "public",
     "accessNotes": "Publicly accessible. Can board at route stops.",
-    "serves": ["adults", "all-genders"],
-    "services": ["warming-shelter", "transport-to-services"],
+    "serves": [
+      "adults",
+      "all-genders"
+    ],
+    "services": [
+      "warming-shelter",
+      "transport-to-services"
+    ],
     "transport": true,
     "transportNotes": "Mobile warming bus with west loop route",
     "referralRequired": false,
@@ -331,16 +542,31 @@
     "status": "active",
     "parentService": "hope-mission",
     "childServices": [],
-    "connections": ["hope-mission", "cdt"],
+    "connections": [
+      "hope-mission",
+      "cdt"
+    ],
     "category": "transport",
-    "tags": ["pilot", "winter", "warming", "transport", "bus"],
+    "tags": [
+      "pilot",
+      "winter",
+      "warming",
+      "transport",
+      "bus",
+      "mobile"
+    ],
     "verification": {
       "status": "unverified",
       "lastVerified": null,
       "verifiedBy": null,
       "confidence": "medium",
       "notes": "Pilot program — funding and continuation status needs verification",
-      "fieldsToCheck": ["hours", "phone", "status", "pilotEndDate"]
+      "fieldsToCheck": [
+        "hours",
+        "phone",
+        "status",
+        "pilotEndDate"
+      ]
     }
   },
   {
@@ -349,24 +575,44 @@
     "shortName": "Streetworks",
     "entryPoint": "direct",
     "operator": "Boyle Street Community Services",
-    "description": "Harm reduction and needle exchange. Mobile outreach during daytime hours only.",
+    "description": "Harm reduction, needle exchange, and mobile outreach via van. Operates 7 evenings per week.",
     "phone": "780-424-4106",
     "address": null,
     "coordinates": null,
     "isDropOff": false,
     "isMobile": true,
     "coverageArea": "downtown-core",
-    "coverageDescription": "Downtown core and surrounding neighbourhoods. Daytime hours only.",
+    "coverageDescription": "Downtown core and surrounding neighbourhoods. Evening mobile van outreach.",
     "hours": {
       "type": "scheduled",
       "schedule": [
-        {"days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "open": 900, "close": 1700}
-      ]
+        {
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "open": 1700,
+          "close": 2359
+        }
+      ],
+      "notes": "Mobile van operates 7 evenings per week"
     },
     "accessibility": "public",
     "accessNotes": "Publicly accessible during operating hours. No transport provided.",
-    "serves": ["adults", "all-genders"],
-    "services": ["harm-reduction", "needle-exchange", "outreach"],
+    "serves": [
+      "adults",
+      "all-genders"
+    ],
+    "services": [
+      "harm-reduction",
+      "needle-exchange",
+      "outreach"
+    ],
     "transport": false,
     "transportNotes": "No transport provided",
     "referralRequired": false,
@@ -375,16 +621,25 @@
     "status": "active",
     "parentService": "boyle-street",
     "childServices": [],
-    "connections": ["boyle-street"],
+    "connections": [
+      "boyle-street"
+    ],
     "category": "outreach",
-    "tags": ["harm-reduction", "needle-exchange", "mobile", "daytime"],
+    "tags": [
+      "harm-reduction",
+      "needle-exchange",
+      "mobile",
+      "evening"
+    ],
     "verification": {
       "status": "unverified",
       "lastVerified": null,
       "verifiedBy": null,
-      "confidence": "medium",
-      "notes": "Hours and contact info from web research, not confirmed with operator",
-      "fieldsToCheck": ["hours", "phone"]
+      "confidence": "high",
+      "notes": "Hours updated to 7 evenings/week per boylestreet.org/post/streetworks (Feb 2026).",
+      "fieldsToCheck": [
+        "phone"
+      ]
     }
   },
   {
@@ -393,7 +648,7 @@
     "shortName": "MOAT",
     "entryPoint": "direct",
     "operator": "Boyle Street Community Services",
-    "description": "Mobile addictions outreach team operating from Boyle Street.",
+    "description": "Mobile addictions outreach team from Boyle Street Community Services. Provides harm reduction supplies, addictions counselling referrals, and connects individuals struggling with substance use to treatment and support services. Weekdays 9am–5pm.",
     "phone": "780-424-4106",
     "address": null,
     "coordinates": null,
@@ -404,13 +659,30 @@
     "hours": {
       "type": "scheduled",
       "schedule": [
-        {"days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "open": 900, "close": 1700}
+        {
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "open": 900,
+          "close": 1700
+        }
       ]
     },
     "accessibility": "public",
     "accessNotes": "Publicly accessible during operating hours.",
-    "serves": ["adults", "all-genders"],
-    "services": ["addictions-support", "outreach", "referral"],
+    "serves": [
+      "adults",
+      "all-genders"
+    ],
+    "services": [
+      "addictions-support",
+      "outreach",
+      "referral"
+    ],
     "transport": false,
     "transportNotes": null,
     "referralRequired": false,
@@ -419,16 +691,25 @@
     "status": "active",
     "parentService": "boyle-street",
     "childServices": [],
-    "connections": ["boyle-street"],
+    "connections": [
+      "boyle-street"
+    ],
     "category": "outreach",
-    "tags": ["addictions", "mobile", "outreach"],
+    "tags": [
+      "addictions",
+      "mobile",
+      "outreach"
+    ],
     "verification": {
       "status": "unverified",
-      "lastVerified": null,
+      "lastVerified": "2026-02-16",
       "verifiedBy": null,
       "confidence": "medium",
-      "notes": "Hours and contact info from web research, not confirmed with operator",
-      "fieldsToCheck": ["hours", "phone"]
+      "notes": "Description enriched (Feb 2026). Boyle Street operated. Hours unverified for 2026.",
+      "fieldsToCheck": [
+        "hours",
+        "phone"
+      ]
     }
   },
   {
@@ -448,14 +729,34 @@
     "hours": {
       "type": "scheduled",
       "schedule": [
-        {"days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "open": 600, "close": 200}
+        {
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "open": 600,
+          "close": 200
+        }
       ],
       "notes": "6am to 2am, 7 days a week. 7 teams."
     },
     "accessibility": "restricted",
     "accessNotes": "PO referrals only. Not directly accessible by public.",
-    "serves": ["adults", "all-genders"],
-    "services": ["transit-outreach", "crisis-response", "transport-to-services", "referral"],
+    "serves": [
+      "adults",
+      "all-genders"
+    ],
+    "services": [
+      "transit-outreach",
+      "crisis-response",
+      "transport-to-services",
+      "referral"
+    ],
     "transport": true,
     "transportNotes": "Can provide transport from transit locations to services",
     "referralRequired": true,
@@ -464,16 +765,28 @@
     "status": "active",
     "parentService": null,
     "childServices": [],
-    "connections": ["peace-officers", "cdt"],
+    "connections": [
+      "peace-officers-transit",
+      "cdt"
+    ],
     "category": "outreach",
-    "tags": ["transit", "peace-officers", "transport", "outreach"],
+    "tags": [
+      "transit",
+      "peace-officers",
+      "transport",
+      "outreach",
+      "mobile"
+    ],
     "verification": {
       "status": "unverified",
       "lastVerified": null,
       "verifiedBy": null,
       "confidence": "medium",
       "notes": "Hours and contact info from web research, not confirmed with operator",
-      "fieldsToCheck": ["hours", "phone"]
+      "fieldsToCheck": [
+        "hours",
+        "phone"
+      ]
     }
   },
   {
@@ -482,7 +795,7 @@
     "shortName": "Transit POs",
     "entryPoint": "311",
     "operator": "City of Edmonton",
-    "description": "Patrol ETS/LRT stations. Fare compliance, safety. Can provide transport. 7 days a week, not 24 hours.",
+    "description": "Patrol ETS/LRT stations 24/7. Fare compliance, safety. Can provide transport. Transit Watch line: 780-442-4900 for immediate safety concerns.",
     "phone": "311",
     "address": null,
     "coordinates": null,
@@ -491,16 +804,18 @@
     "coverageArea": "transit-system",
     "coverageDescription": "ETS and LRT stations citywide",
     "hours": {
-      "type": "scheduled",
-      "schedule": [
-        {"days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "open": 600, "close": 2359}
-      ],
-      "notes": "7 days a week, not 24 hours"
+      "type": "24/7"
     },
     "accessibility": "public",
     "accessNotes": "Available at transit stations. Can approach directly.",
-    "serves": ["all"],
-    "services": ["safety", "transport", "referral"],
+    "serves": [
+      "all"
+    ],
+    "services": [
+      "safety",
+      "transport",
+      "referral"
+    ],
     "transport": true,
     "transportNotes": "Can provide transport",
     "referralRequired": false,
@@ -509,16 +824,29 @@
     "status": "active",
     "parentService": null,
     "childServices": [],
-    "connections": ["cott", "cdt"],
+    "connections": [
+      "cott",
+      "cdt",
+      "bia-core-patrol"
+    ],
     "category": "enforcement",
-    "tags": ["transit", "peace-officers", "safety"],
+    "tags": [
+      "transit",
+      "peace-officers",
+      "safety",
+      "24/7",
+      "mobile",
+      "transport"
+    ],
     "verification": {
       "status": "unverified",
       "lastVerified": null,
       "verifiedBy": null,
-      "confidence": "medium",
-      "notes": "Hours and contact info from web research, not confirmed with operator",
-      "fieldsToCheck": ["hours", "phone"]
+      "confidence": "high",
+      "notes": "Hours updated to 24/7 per edmonton.ca/ets/safety-and-security (Feb 2026). Transit Watch line 780-442-4900 confirmed.",
+      "fieldsToCheck": [
+        "phone"
+      ]
     }
   },
   {
@@ -527,7 +855,7 @@
     "shortName": "Park Rangers",
     "entryPoint": "311",
     "operator": "City of Edmonton",
-    "description": "Ensure river valley is safe. 7 days a week, not 24 hours.",
+    "description": "Patrol Edmonton river valley parks and trails 7 days/week. Can assist people in distress, connect to services via 311, and report encampments. Not a crisis response team but often first to encounter vulnerable individuals in green spaces.",
     "phone": "311",
     "address": null,
     "coordinates": null,
@@ -538,14 +866,31 @@
     "hours": {
       "type": "scheduled",
       "schedule": [
-        {"days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "open": 700, "close": 2100}
+        {
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "open": 700,
+          "close": 2100
+        }
       ],
       "notes": "7 days a week, not 24 hours"
     },
     "accessibility": "public",
     "accessNotes": "Available in river valley parks.",
-    "serves": ["all"],
-    "services": ["safety", "referral"],
+    "serves": [
+      "all"
+    ],
+    "services": [
+      "safety",
+      "referral"
+    ],
     "transport": false,
     "transportNotes": null,
     "referralRequired": false,
@@ -554,16 +899,27 @@
     "status": "active",
     "parentService": null,
     "childServices": [],
-    "connections": [],
+    "connections": [
+      "encampment-low-risk",
+      "cdt"
+    ],
     "category": "enforcement",
-    "tags": ["parks", "river-valley", "safety"],
+    "tags": [
+      "parks",
+      "river-valley",
+      "safety",
+      "mobile"
+    ],
     "verification": {
       "status": "unverified",
-      "lastVerified": null,
+      "lastVerified": "2026-02-16",
       "verifiedBy": null,
       "confidence": "medium",
-      "notes": "Hours and contact info from web research, not confirmed with operator",
-      "fieldsToCheck": ["hours", "phone"]
+      "notes": "Description enriched (Feb 2026). River valley patrols 7 days/week confirmed.",
+      "fieldsToCheck": [
+        "hours",
+        "phone"
+      ]
     }
   },
   {
@@ -572,7 +928,7 @@
     "shortName": "Community Standards",
     "entryPoint": "311",
     "operator": "City of Edmonton",
-    "description": "By-law enforcement. 7 days a week, not 24 hours.",
+    "description": "By-law enforcement. 6 days a week (closed Sundays and statutory holidays).",
     "phone": "311",
     "address": null,
     "coordinates": null,
@@ -583,14 +939,29 @@
     "hours": {
       "type": "scheduled",
       "schedule": [
-        {"days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "open": 700, "close": 2100}
+        {
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "open": 700,
+          "close": 1900
+        }
       ],
-      "notes": "7 days a week, not 24 hours"
+      "notes": "Closed Sundays and statutory holidays"
     },
     "accessibility": "public",
     "accessNotes": "Call 311 for by-law concerns.",
-    "serves": ["all"],
-    "services": ["by-law-enforcement"],
+    "serves": [
+      "all"
+    ],
+    "services": [
+      "by-law-enforcement"
+    ],
     "transport": false,
     "transportNotes": null,
     "referralRequired": false,
@@ -599,16 +970,24 @@
     "status": "active",
     "parentService": null,
     "childServices": [],
-    "connections": [],
+    "connections": [
+      "encampment-low-risk"
+    ],
     "category": "enforcement",
-    "tags": ["by-law", "enforcement"],
+    "tags": [
+      "by-law",
+      "enforcement",
+      "mobile"
+    ],
     "verification": {
       "status": "unverified",
       "lastVerified": null,
       "verifiedBy": null,
-      "confidence": "medium",
-      "notes": "Hours and contact info from web research, not confirmed with operator",
-      "fieldsToCheck": ["hours", "phone"]
+      "confidence": "high",
+      "notes": "Hours updated to 7am-7pm, 6 days/wk (closed Sun & stat holidays) per edmonton.ca/programs_services/311-city-services (Feb 2026).",
+      "fieldsToCheck": [
+        "phone"
+      ]
     }
   },
   {
@@ -617,7 +996,7 @@
     "shortName": "Low-Risk Encampment",
     "entryPoint": "311",
     "operator": "City of Edmonton Peace Officers & Outreach",
-    "description": "PO & Outreach supporting closure and clean-up of low-risk encampments.",
+    "description": "Coordinated response to low-risk encampments. Peace officers and outreach workers engage residents, offer connections to shelter, housing, and support services before camp closure. Referrals to CDT, shelters, and social services. M–F 8am–4pm.",
     "phone": "311",
     "address": null,
     "coordinates": null,
@@ -628,13 +1007,30 @@
     "hours": {
       "type": "scheduled",
       "schedule": [
-        {"days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "open": 800, "close": 1600}
+        {
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "open": 800,
+          "close": 1600
+        }
       ]
     },
     "accessibility": "restricted",
     "accessNotes": "Not publicly accessible. Coordinated through 311 and peace officers.",
-    "serves": ["adults", "all-genders"],
-    "services": ["encampment-response", "clean-up", "referral"],
+    "serves": [
+      "adults",
+      "all-genders"
+    ],
+    "services": [
+      "encampment-response",
+      "clean-up",
+      "referral"
+    ],
     "transport": false,
     "transportNotes": null,
     "referralRequired": true,
@@ -643,16 +1039,28 @@
     "status": "active",
     "parentService": null,
     "childServices": [],
-    "connections": ["peace-officers-transit", "cdt"],
+    "connections": [
+      "peace-officers-transit",
+      "cdt",
+      "park-rangers"
+    ],
     "category": "encampment",
-    "tags": ["encampment", "low-risk", "clean-up"],
+    "tags": [
+      "encampment",
+      "low-risk",
+      "clean-up",
+      "mobile"
+    ],
     "verification": {
       "status": "unverified",
-      "lastVerified": null,
+      "lastVerified": "2026-02-16",
       "verifiedBy": null,
       "confidence": "medium",
-      "notes": "Hours and contact info from web research, not confirmed with operator",
-      "fieldsToCheck": ["hours", "phone"]
+      "notes": "Description enriched (Feb 2026). PO + outreach coordinated response. Hours M–F 8am–4pm from research.",
+      "fieldsToCheck": [
+        "hours",
+        "phone"
+      ]
     }
   },
   {
@@ -661,7 +1069,7 @@
     "shortName": "High-Risk Encampment",
     "entryPoint": "311",
     "operator": "City of Edmonton Peace Officers & EPS",
-    "description": "PO & EPS supporting closure of high-risk encampments.",
+    "description": "Joint peace officer and EPS response to high-risk encampments involving safety concerns (weapons, fires, hazardous materials). Outreach offered alongside enforcement. Residents connected to emergency shelters and services where possible. M–F 8am–4pm.",
     "phone": "311",
     "address": null,
     "coordinates": null,
@@ -672,13 +1080,29 @@
     "hours": {
       "type": "scheduled",
       "schedule": [
-        {"days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "open": 800, "close": 1600}
+        {
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "open": 800,
+          "close": 1600
+        }
       ]
     },
     "accessibility": "restricted",
     "accessNotes": "Not publicly accessible. Joint PO and EPS response.",
-    "serves": ["adults", "all-genders"],
-    "services": ["encampment-response", "safety"],
+    "serves": [
+      "adults",
+      "all-genders"
+    ],
+    "services": [
+      "encampment-response",
+      "safety"
+    ],
     "transport": false,
     "transportNotes": null,
     "referralRequired": true,
@@ -687,16 +1111,27 @@
     "status": "active",
     "parentService": null,
     "childServices": [],
-    "connections": ["peace-officers-transit", "eps"],
+    "connections": [
+      "peace-officers-transit",
+      "eps"
+    ],
     "category": "encampment",
-    "tags": ["encampment", "high-risk", "EPS"],
+    "tags": [
+      "encampment",
+      "high-risk",
+      "EPS",
+      "mobile"
+    ],
     "verification": {
       "status": "unverified",
-      "lastVerified": null,
+      "lastVerified": "2026-02-16",
       "verifiedBy": null,
       "confidence": "medium",
-      "notes": "Hours and contact info from web research, not confirmed with operator",
-      "fieldsToCheck": ["hours", "phone"]
+      "notes": "Description enriched (Feb 2026). Joint PO + EPS response. Hours M–F 8am–4pm from research.",
+      "fieldsToCheck": [
+        "hours",
+        "phone"
+      ]
     }
   },
   {
@@ -705,7 +1140,7 @@
     "shortName": "EPS Patrol",
     "entryPoint": "911",
     "operator": "Edmonton Police Service",
-    "description": "Respond to emergency calls. Patrol in vehicles 24/7.",
+    "description": "24/7 patrol responding to emergency 911 calls. Officers can connect people in crisis to CDT (211+3), PACT, or transport to hospital. First responders for high-risk situations involving violence, weapons, or immediate danger.",
     "phone": "911",
     "address": null,
     "coordinates": null,
@@ -718,8 +1153,13 @@
     },
     "accessibility": "public",
     "accessNotes": "Call 911 for emergencies.",
-    "serves": ["all"],
-    "services": ["emergency-response", "safety"],
+    "serves": [
+      "all"
+    ],
+    "services": [
+      "emergency-response",
+      "safety"
+    ],
     "transport": false,
     "transportNotes": null,
     "referralRequired": false,
@@ -728,16 +1168,29 @@
     "status": "active",
     "parentService": null,
     "childServices": [],
-    "connections": ["eps-beats", "eps-help", "cdt", "uhei"],
+    "connections": [
+      "eps-beats",
+      "eps-help",
+      "cdt",
+      "uhei"
+    ],
     "category": "enforcement",
-    "tags": ["police", "emergency", "24/7"],
+    "tags": [
+      "police",
+      "emergency",
+      "24/7",
+      "mobile"
+    ],
     "verification": {
       "status": "unverified",
-      "lastVerified": null,
+      "lastVerified": "2026-02-16",
       "verifiedBy": null,
       "confidence": "medium",
-      "notes": "EPS internal services — hours and scope from research conversations",
-      "fieldsToCheck": ["hours", "coverageArea"]
+      "notes": "Description enriched (Feb 2026). 24/7 patrol, connections to CDT/PACT confirmed.",
+      "fieldsToCheck": [
+        "hours",
+        "coverageArea"
+      ]
     }
   },
   {
@@ -746,7 +1199,7 @@
     "shortName": "EPS Beats",
     "entryPoint": "911",
     "operator": "Edmonton Police Service",
-    "description": "Officers on foot. Engage with community and business front-line officers. Hours vary by area.",
+    "description": "Officers on foot patrol in downtown core and high-activity areas. Engage with community members and businesses. Can connect vulnerable individuals to H.E.L.P. navigators, CDT, or other services. Hours vary by area (typically 6am–10pm).",
     "phone": "911",
     "address": null,
     "coordinates": null,
@@ -757,14 +1210,32 @@
     "hours": {
       "type": "scheduled",
       "schedule": [
-        {"days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "open": 600, "close": 2200}
+        {
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "open": 600,
+          "close": 2200
+        }
       ],
       "notes": "Hours vary depending on area of city"
     },
     "accessibility": "public",
     "accessNotes": "Can approach directly on foot.",
-    "serves": ["all"],
-    "services": ["community-engagement", "safety", "referral"],
+    "serves": [
+      "all"
+    ],
+    "services": [
+      "community-engagement",
+      "safety",
+      "referral"
+    ],
     "transport": false,
     "transportNotes": null,
     "referralRequired": false,
@@ -773,16 +1244,27 @@
     "status": "active",
     "parentService": null,
     "childServices": [],
-    "connections": ["eps-patrol", "cdt"],
+    "connections": [
+      "eps-patrol",
+      "cdt"
+    ],
     "category": "enforcement",
-    "tags": ["police", "community", "foot-patrol"],
+    "tags": [
+      "police",
+      "community",
+      "foot-patrol",
+      "mobile"
+    ],
     "verification": {
       "status": "unverified",
-      "lastVerified": null,
+      "lastVerified": "2026-02-16",
       "verifiedBy": null,
       "confidence": "medium",
-      "notes": "EPS internal services — hours and scope from research conversations",
-      "fieldsToCheck": ["hours", "coverageArea"]
+      "notes": "Description enriched (Feb 2026). Foot patrol in downtown + high-activity areas. Hours vary by area.",
+      "fieldsToCheck": [
+        "hours",
+        "coverageArea"
+      ]
     }
   },
   {
@@ -791,7 +1273,7 @@
     "shortName": "H.E.L.P.",
     "entryPoint": "911",
     "operator": "Edmonton Police Service",
-    "description": "Officers and navigators who support front-line officers. Work with vulnerable who interact with officers. Case management. EPS referrals only.",
+    "description": "EPS officers paired with social navigators who provide case management for vulnerable individuals who frequently interact with police. Build relationships, connect to housing, treatment, and social services. Internal EPS referral — not publicly accessible.",
     "phone": null,
     "address": null,
     "coordinates": null,
@@ -802,13 +1284,30 @@
     "hours": {
       "type": "scheduled",
       "schedule": [
-        {"days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "open": 800, "close": 1600}
+        {
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "open": 800,
+          "close": 1600
+        }
       ]
     },
     "accessibility": "restricted",
     "accessNotes": "EPS referrals only. Not publicly accessible.",
-    "serves": ["adults", "all-genders"],
-    "services": ["case-management", "navigation", "referral"],
+    "serves": [
+      "adults",
+      "all-genders"
+    ],
+    "services": [
+      "case-management",
+      "navigation",
+      "referral"
+    ],
     "transport": false,
     "transportNotes": null,
     "referralRequired": true,
@@ -817,16 +1316,28 @@
     "status": "active",
     "parentService": null,
     "childServices": [],
-    "connections": ["eps-patrol", "eps-beats"],
+    "connections": [
+      "eps-patrol",
+      "eps-beats"
+    ],
     "category": "navigation",
-    "tags": ["police", "case-management", "navigation", "EPS-only"],
+    "tags": [
+      "police",
+      "case-management",
+      "navigation",
+      "EPS-only",
+      "mobile"
+    ],
     "verification": {
       "status": "unverified",
-      "lastVerified": null,
+      "lastVerified": "2026-02-16",
       "verifiedBy": null,
       "confidence": "medium",
-      "notes": "EPS internal services — hours and scope from research conversations",
-      "fieldsToCheck": ["hours", "coverageArea"]
+      "notes": "Description enriched (Feb 2026). Officers + social navigators. Internal EPS program — not publicly accessible.",
+      "fieldsToCheck": [
+        "hours",
+        "coverageArea"
+      ]
     }
   },
   {
@@ -846,14 +1357,36 @@
     "hours": {
       "type": "scheduled",
       "schedule": [
-        {"days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "open": 800, "close": 2000}
+        {
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "open": 800,
+          "close": 2000
+        }
       ],
       "notes": "Everyday 8am-8pm"
     },
     "accessibility": "public-criteria",
-    "accessNotes": "For individuals experiencing homelessness, addiction, or mental health issues.",
-    "serves": ["adults", "all-genders"],
-    "services": ["medical-care", "crisis-response", "referral"],
+    "accessNotes": "Call 1-833-367-2788 to request. For individuals experiencing homelessness, active addiction, or acute mental health distress who need medical assessment but not ER. No referral needed.",
+    "serves": [
+      "adults",
+      "all-genders",
+      "homeless",
+      "addiction",
+      "mental-health"
+    ],
+    "services": [
+      "medical-care",
+      "crisis-response",
+      "referral"
+    ],
     "transport": false,
     "transportNotes": null,
     "referralRequired": false,
@@ -862,16 +1395,28 @@
     "status": "active",
     "parentService": null,
     "childServices": [],
-    "connections": ["access-247", "city-centre-team"],
+    "connections": [
+      "access-247",
+      "city-centre-team"
+    ],
     "category": "healthcare",
-    "tags": ["medical", "paramedic", "mobile", "AHS"],
+    "tags": [
+      "medical",
+      "paramedic",
+      "mobile",
+      "AHS"
+    ],
     "verification": {
       "status": "unverified",
-      "lastVerified": null,
+      "lastVerified": "2026-02-16",
       "verifiedBy": null,
       "confidence": "medium",
-      "notes": "AHS service details from web research, not confirmed with AHS",
-      "fieldsToCheck": ["hours", "phone", "coverageArea"]
+      "notes": "Description and access notes enriched (Feb 2026). Phone 1-833-367-2788 is AHS referral line. Serves field updated.",
+      "fieldsToCheck": [
+        "phone",
+        "hours",
+        "coverageArea"
+      ]
     }
   },
   {
@@ -880,7 +1425,7 @@
     "shortName": "CRT",
     "entryPoint": "AHS",
     "operator": "Alberta Health Services",
-    "description": "6 teams with a nurse or paramedic. Provide care in home. No transport.",
+    "description": "6 AHS teams each with a nurse or paramedic. Provide acute medical care and assessment in home/community settings for individuals who don't need emergency department but need more than a phone call. Daily 8am–8pm. No transport provided.",
     "phone": "1-833-367-2788",
     "address": null,
     "coordinates": null,
@@ -891,13 +1436,32 @@
     "hours": {
       "type": "scheduled",
       "schedule": [
-        {"days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "open": 800, "close": 2000}
+        {
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "open": 800,
+          "close": 2000
+        }
       ]
     },
     "accessibility": "public-criteria",
-    "accessNotes": "Publicly accessible. Specific criteria to be met.",
-    "serves": ["adults", "all-genders"],
-    "services": ["in-home-care", "medical-assessment", "referral"],
+    "accessNotes": "Call 1-833-367-2788. For individuals needing nursing/paramedic assessment at home — acute illness, wound care, medication concerns. Must meet clinical criteria assessed on intake call.",
+    "serves": [
+      "adults",
+      "all-genders"
+    ],
+    "services": [
+      "in-home-care",
+      "medical-assessment",
+      "referral"
+    ],
     "transport": false,
     "transportNotes": "No transport provided",
     "referralRequired": false,
@@ -906,16 +1470,30 @@
     "status": "active",
     "parentService": null,
     "childServices": [],
-    "connections": ["community-paramedics", "access-247"],
+    "connections": [
+      "community-paramedics",
+      "access-247"
+    ],
     "category": "healthcare",
-    "tags": ["medical", "in-home", "nurse", "AHS"],
+    "tags": [
+      "medical",
+      "in-home",
+      "nurse",
+      "AHS",
+      "mobile"
+    ],
     "verification": {
       "status": "unverified",
-      "lastVerified": null,
+      "lastVerified": "2026-02-16",
       "verifiedBy": null,
       "confidence": "medium",
-      "notes": "AHS service details from web research, not confirmed with AHS",
-      "fieldsToCheck": ["hours", "phone", "coverageArea"]
+      "notes": "Description and access notes enriched (Feb 2026). 6 teams confirmed. Phone 1-833-367-2788 is AHS general line.",
+      "fieldsToCheck": [
+        "name",
+        "phone",
+        "hours",
+        "coverageArea"
+      ]
     }
   },
   {
@@ -924,7 +1502,7 @@
     "shortName": "City Centre Team",
     "entryPoint": "AHS",
     "operator": "Alberta Health Services",
-    "description": "AHS team focused on downtown core. 8am-8pm everyday.",
+    "description": "AHS mobile team focused on Edmonton's downtown core. Provides medical assessment, crisis response, and referrals for individuals experiencing homelessness, addiction, or mental health issues. Daily 8am–8pm.",
     "phone": "1-833-367-2788",
     "address": null,
     "coordinates": null,
@@ -935,14 +1513,33 @@
     "hours": {
       "type": "scheduled",
       "schedule": [
-        {"days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "open": 800, "close": 2000}
+        {
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "open": 800,
+          "close": 2000
+        }
       ],
       "notes": "Everyday 8am-8pm"
     },
     "accessibility": "public-criteria",
-    "accessNotes": "Publicly accessible. Specific criteria to be met.",
-    "serves": ["adults", "all-genders"],
-    "services": ["medical-care", "crisis-response", "referral"],
+    "accessNotes": "Operates in downtown core. Can be reached via AHS at 1-833-367-2788. Encounters individuals during patrols or responds to requests from other services.",
+    "serves": [
+      "adults",
+      "all-genders"
+    ],
+    "services": [
+      "medical-care",
+      "crisis-response",
+      "referral"
+    ],
     "transport": false,
     "transportNotes": null,
     "referralRequired": false,
@@ -951,16 +1548,28 @@
     "status": "active",
     "parentService": null,
     "childServices": [],
-    "connections": ["community-paramedics", "access-247"],
+    "connections": [
+      "community-paramedics",
+      "access-247"
+    ],
     "category": "healthcare",
-    "tags": ["medical", "downtown", "AHS"],
+    "tags": [
+      "medical",
+      "downtown",
+      "AHS",
+      "mobile"
+    ],
     "verification": {
       "status": "unverified",
-      "lastVerified": null,
+      "lastVerified": "2026-02-16",
       "verifiedBy": null,
       "confidence": "medium",
-      "notes": "AHS service details from web research, not confirmed with AHS",
-      "fieldsToCheck": ["hours", "phone", "coverageArea"]
+      "notes": "Description and access notes enriched (Feb 2026). AHS internal team, limited public documentation.",
+      "fieldsToCheck": [
+        "hours",
+        "phone",
+        "coverageArea"
+      ]
     }
   },
   {
@@ -972,19 +1581,32 @@
     "description": "24/7 mental health and addiction support. Walk-in and phone. Located at Anderson Hall.",
     "phone": "780-424-2424",
     "address": "10959 102 Street NW, Edmonton, AB",
-    "coordinates": [53.5480, -113.4975],
+    "coordinates": [
+      53.548,
+      -113.4975
+    ],
     "isDropOff": true,
     "isMobile": false,
     "coverageArea": null,
     "coverageDescription": null,
     "hours": {
       "type": "24/7",
-      "notes": "Phone 24/7. Walk-in hours may vary — call ahead to confirm."
+      "notes": "Phone and walk-in both available 24/7."
     },
     "accessibility": "public",
-    "accessNotes": "Walk-in and phone. No referral needed.",
-    "serves": ["adults", "youth", "all-genders"],
-    "services": ["mental-health", "addiction-support", "crisis-intervention", "assessment", "referral"],
+    "accessNotes": "Walk-in and phone, both 24/7. No referral needed. Located at Anderson Hall (Royal Alexandra Hospital campus).",
+    "serves": [
+      "adults",
+      "youth",
+      "all-genders"
+    ],
+    "services": [
+      "mental-health",
+      "addiction-support",
+      "crisis-intervention",
+      "assessment",
+      "referral"
+    ],
     "transport": false,
     "transportNotes": null,
     "referralRequired": false,
@@ -992,17 +1614,39 @@
     "pilotEndDate": null,
     "status": "active",
     "parentService": null,
-    "childServices": ["pact", "crems"],
-    "connections": ["pact", "crems", "community-paramedics", "royal-alexandra-hospital"],
+    "childServices": [
+      "pact",
+      "crems"
+    ],
+    "connections": [
+      "pact",
+      "crems",
+      "community-paramedics",
+      "royal-alexandra-hospital",
+      "u-of-a-hospital",
+      "988-crisis-line"
+    ],
     "category": "mental-health",
-    "tags": ["mental-health", "addiction", "24/7", "walk-in", "AHS"],
+    "tags": [
+      "mental-health",
+      "addiction",
+      "24/7",
+      "walk-in",
+      "AHS",
+      "youth"
+    ],
     "verification": {
       "status": "unverified",
       "lastVerified": null,
       "verifiedBy": null,
       "confidence": "medium",
-      "notes": "AHS service details from web research, not confirmed with AHS",
-      "fieldsToCheck": ["hours", "phone", "coverageArea"]
+      "notes": "Phone 780-424-2424 confirmed correct (multiple sources). ADDRESS CONFLICT: Anderson Hall (10959 102 St) vs Fort Rd Hub (13211 Fort Rd NW) — 211.ca and InformAlberta show Fort Rd. Walk-in hours may be 8am-10pm at new location (phone still 24/7). Operator may now be Recovery Alberta. NEEDS PHONE CALL TO CONFIRM.",
+      "fieldsToCheck": [
+        "address",
+        "coordinates",
+        "hours",
+        "operator"
+      ]
     }
   },
   {
@@ -1024,8 +1668,15 @@
     },
     "accessibility": "restricted",
     "accessNotes": "Not publicly accessible. Dispatched through EPS or AHS.",
-    "serves": ["adults", "all-genders"],
-    "services": ["mental-health-assessment", "crisis-intervention", "mental-health-act-apprehension"],
+    "serves": [
+      "adults",
+      "all-genders"
+    ],
+    "services": [
+      "mental-health-assessment",
+      "crisis-intervention",
+      "mental-health-act-apprehension"
+    ],
     "transport": true,
     "transportNotes": "Can transport to hospital for mental health assessment under Mental Health Act",
     "referralRequired": true,
@@ -1034,16 +1685,31 @@
     "status": "active",
     "parentService": "access-247",
     "childServices": [],
-    "connections": ["access-247", "eps-patrol"],
+    "connections": [
+      "access-247",
+      "eps-patrol"
+    ],
     "category": "mental-health",
-    "tags": ["mental-health", "police", "24/7", "crisis", "apprehension"],
+    "tags": [
+      "mental-health",
+      "police",
+      "24/7",
+      "crisis",
+      "apprehension",
+      "mobile",
+      "transport"
+    ],
     "verification": {
       "status": "unverified",
       "lastVerified": null,
       "verifiedBy": null,
       "confidence": "medium",
       "notes": "AHS service details from web research, not confirmed with AHS",
-      "fieldsToCheck": ["hours", "phone", "coverageArea"]
+      "fieldsToCheck": [
+        "hours",
+        "phone",
+        "coverageArea"
+      ]
     }
   },
   {
@@ -1065,8 +1731,15 @@
     },
     "accessibility": "restricted",
     "accessNotes": "Not publicly accessible. Dispatched through AHS.",
-    "serves": ["adults", "all-genders"],
-    "services": ["mental-health-crisis", "medical-assessment", "crisis-intervention"],
+    "serves": [
+      "adults",
+      "all-genders"
+    ],
+    "services": [
+      "mental-health-crisis",
+      "medical-assessment",
+      "crisis-intervention"
+    ],
     "transport": true,
     "transportNotes": "Can transport to hospital or crisis services",
     "referralRequired": true,
@@ -1075,16 +1748,32 @@
     "status": "active",
     "parentService": "access-247",
     "childServices": [],
-    "connections": ["access-247", "community-paramedics"],
+    "connections": [
+      "access-247",
+      "community-paramedics",
+      "pact"
+    ],
     "category": "mental-health",
-    "tags": ["mental-health", "paramedic", "24/7", "crisis"],
+    "tags": [
+      "mental-health",
+      "paramedic",
+      "24/7",
+      "crisis",
+      "mobile",
+      "transport"
+    ],
     "verification": {
       "status": "unverified",
-      "lastVerified": null,
+      "lastVerified": "2026-02-16",
       "verifiedBy": null,
-      "confidence": "medium",
-      "notes": "AHS service details from web research, not confirmed with AHS",
-      "fieldsToCheck": ["hours", "phone", "coverageArea"]
+      "confidence": "low",
+      "notes": "UNVERIFIABLE: 'CREMS' not found in any public source (Feb 2026). Connection to PACT added. Phone 1-833-367-2788 is AHS general line. ASK WORKING GROUP for public-facing name.",
+      "fieldsToCheck": [
+        "name",
+        "phone",
+        "hours",
+        "operator"
+      ]
     }
   },
   {
@@ -1093,7 +1782,7 @@
     "shortName": "DATS",
     "entryPoint": "DATS",
     "operator": "City of Edmonton",
-    "description": "Transit service for physical/cognitive disability. Application form required for eligibility.",
+    "description": "Transit service for physical/cognitive disability. Application form required for eligibility. Booking required in advance.",
     "phone": "780-496-4567",
     "address": null,
     "coordinates": null,
@@ -1104,14 +1793,53 @@
     "hours": {
       "type": "scheduled",
       "schedule": [
-        {"days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "open": 530, "close": 2400}
+        {
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "open": 530,
+          "close": 2400
+        }
       ],
-      "notes": "Pre-booked rides. Application required."
+      "bookingHours": {
+        "schedule": [
+          {
+            "days": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "open": 730,
+            "close": 1700
+          },
+          {
+            "days": [
+              "Saturday",
+              "Sunday"
+            ],
+            "open": 730,
+            "close": 1200
+          }
+        ]
+      },
+      "notes": "Service operates ~5:30am-midnight. Booking: M-F 7:30am-5pm, Sat-Sun 7:30am-noon."
     },
     "accessibility": "public-criteria",
     "accessNotes": "Application form required for eligibility. Physical/cognitive disability.",
-    "serves": ["all"],
-    "services": ["accessible-transport"],
+    "serves": [
+      "all"
+    ],
+    "services": [
+      "accessible-transport"
+    ],
     "transport": true,
     "transportNotes": "Pre-booked accessible transit rides",
     "referralRequired": false,
@@ -1120,16 +1848,27 @@
     "status": "active",
     "parentService": null,
     "childServices": [],
-    "connections": [],
+    "connections": [
+      "health-access-mobile",
+      "access-247"
+    ],
     "category": "transport",
-    "tags": ["transit", "accessible", "disability"],
+    "tags": [
+      "transit",
+      "accessible",
+      "disability",
+      "mobile",
+      "transport"
+    ],
     "verification": {
       "status": "unverified",
       "lastVerified": null,
       "verifiedBy": null,
       "confidence": "high",
-      "notes": "City service, well-documented",
-      "fieldsToCheck": ["phone"]
+      "notes": "City service, well-documented. Booking hours updated per edmonton.ca/ets/dats (Feb 2026).",
+      "fieldsToCheck": [
+        "phone"
+      ]
     }
   },
   {
@@ -1138,7 +1877,7 @@
     "shortName": "Core Patrol",
     "entryPoint": "BIA",
     "operator": "Downtown Business Association",
-    "description": "Patrols DBA boundaries 24/7 operations. Managed by HireGood staff.",
+    "description": "24/7 safety patrol within Downtown Business Association boundaries. 2 staff, 2 vehicles managed by HireGood. Privately funded for 2026 ($330K from National Bank). Respond to safety concerns, provide outreach and referrals to services for vulnerable individuals encountered in the downtown core.",
     "phone": null,
     "address": null,
     "coordinates": null,
@@ -1152,8 +1891,14 @@
     },
     "accessibility": "public-criteria",
     "accessNotes": "Operates within DBA boundaries. Can approach patrol staff.",
-    "serves": ["all"],
-    "services": ["safety-patrol", "outreach", "referral"],
+    "serves": [
+      "all"
+    ],
+    "services": [
+      "safety-patrol",
+      "outreach",
+      "referral"
+    ],
     "transport": false,
     "transportNotes": null,
     "referralRequired": false,
@@ -1162,16 +1907,28 @@
     "status": "active",
     "parentService": null,
     "childServices": [],
-    "connections": [],
+    "connections": [
+      "cdt",
+      "peace-officers-transit"
+    ],
     "category": "bia",
-    "tags": ["BIA", "downtown", "patrol", "24/7"],
+    "tags": [
+      "BIA",
+      "downtown",
+      "patrol",
+      "24/7",
+      "mobile"
+    ],
     "verification": {
       "status": "unverified",
-      "lastVerified": null,
+      "lastVerified": "2026-02-16",
       "verifiedBy": null,
       "confidence": "medium",
-      "notes": "BIA details from research conversations, coverage areas approximate",
-      "fieldsToCheck": ["hours", "coverageArea"]
+      "notes": "Description enriched (Feb 2026). 2 staff, 2 vehicles, $330K funding from National Bank. No public phone found — contact DBA.",
+      "fieldsToCheck": [
+        "hours",
+        "coverageArea"
+      ]
     }
   },
   {
@@ -1180,7 +1937,7 @@
     "shortName": "Stoney Plain Rd",
     "entryPoint": "BIA",
     "operator": "Stoney Plain Road BIA",
-    "description": "2 outreach navigators, 4 month pilot, 4 days a week. HireGood operations.",
+    "description": "2 outreach navigators patrolling the Stoney Plain Road BIA area 4 days/week. Connect vulnerable individuals to services, provide referrals, and support businesses dealing with social disorder. HireGood operations. 4-month pilot launched Nov 2025.",
     "phone": null,
     "address": null,
     "coordinates": null,
@@ -1191,32 +1948,59 @@
     "hours": {
       "type": "scheduled",
       "schedule": [
-        {"days": ["Monday", "Tuesday", "Wednesday", "Thursday"], "open": 900, "close": 1700}
+        {
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday"
+          ],
+          "open": 900,
+          "close": 1700
+        }
       ],
       "notes": "4 month pilot, 4 days a week"
     },
     "accessibility": "public-criteria",
     "accessNotes": "Can approach navigators in BIA area.",
-    "serves": ["all"],
-    "services": ["outreach", "navigation", "referral"],
+    "serves": [
+      "all"
+    ],
+    "services": [
+      "outreach",
+      "navigation",
+      "referral"
+    ],
     "transport": false,
     "transportNotes": null,
     "referralRequired": false,
     "pilotProgram": true,
-    "pilotEndDate": null,
+    "pilotEndDate": "2026-03-31",
     "status": "active",
     "parentService": null,
     "childServices": [],
-    "connections": [],
+    "connections": [
+      "cdt"
+    ],
     "category": "bia",
-    "tags": ["BIA", "pilot", "navigators", "outreach"],
+    "tags": [
+      "BIA",
+      "pilot",
+      "navigators",
+      "outreach",
+      "mobile"
+    ],
     "verification": {
       "status": "unverified",
-      "lastVerified": null,
+      "lastVerified": "2026-02-16",
       "verifiedBy": null,
       "confidence": "medium",
-      "notes": "Pilot program — funding and continuation status needs verification",
-      "fieldsToCheck": ["hours", "phone", "status", "pilotEndDate"]
+      "notes": "Description enriched (Feb 2026). 4-month pilot launched Nov 2025. No public phone found — contact Stoney Plain Rd BIA.",
+      "fieldsToCheck": [
+        "hours",
+        "phone",
+        "status"
+      ]
     }
   },
   {
@@ -1225,7 +2009,7 @@
     "shortName": "Old Strathcona",
     "entryPoint": "BIA",
     "operator": "Old Strathcona BIA",
-    "description": "On-call service. 9am-12am. HireGood staff.",
+    "description": "On-call safety and outreach service in Old Strathcona/Whyte Avenue area. HireGood staff respond to safety concerns from businesses and community members. Connect vulnerable individuals to services and provide referrals.",
     "phone": null,
     "address": null,
     "coordinates": null,
@@ -1236,14 +2020,31 @@
     "hours": {
       "type": "scheduled",
       "schedule": [
-        {"days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "open": 900, "close": 2400}
+        {
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "open": 900,
+          "close": 2400
+        }
       ],
       "notes": "9am-12am, HireGood staff, on-call"
     },
     "accessibility": "public-criteria",
     "accessNotes": "On-call within Old Strathcona BIA area.",
-    "serves": ["all"],
-    "services": ["safety-patrol", "outreach"],
+    "serves": [
+      "all"
+    ],
+    "services": [
+      "safety-patrol",
+      "outreach"
+    ],
     "transport": false,
     "transportNotes": null,
     "referralRequired": false,
@@ -1252,16 +2053,26 @@
     "status": "active",
     "parentService": null,
     "childServices": [],
-    "connections": [],
+    "connections": [
+      "cdt"
+    ],
     "category": "bia",
-    "tags": ["BIA", "old-strathcona", "on-call"],
+    "tags": [
+      "BIA",
+      "old-strathcona",
+      "on-call",
+      "mobile"
+    ],
     "verification": {
       "status": "unverified",
-      "lastVerified": null,
+      "lastVerified": "2026-02-16",
       "verifiedBy": null,
       "confidence": "medium",
-      "notes": "BIA details from research conversations, coverage areas approximate",
-      "fieldsToCheck": ["hours", "coverageArea"]
+      "notes": "Description enriched (Feb 2026). On-call service, HireGood staff. No public phone found — contact Old Strathcona BIA.",
+      "fieldsToCheck": [
+        "hours",
+        "coverageArea"
+      ]
     }
   },
   {
@@ -1270,10 +2081,13 @@
     "shortName": "George Spady Detox",
     "entryPoint": "direct",
     "operator": "George Spady Society",
-    "description": "Social detoxification centre. Walk-in intake for intoxicated adults needing safe sobering. Relocated to Aurora Centre in Aug 2025.",
+    "description": "Medically supported detox (withdrawal management) at Aurora Centre. 41 detox beds + 19 pre-treatment recovery beds (60 total). Walk-in triage daily 8:30–9:30am at southwest door. No doctor referral needed. 24-hour phone line. Opened Aug 2025, replacing downtown location.",
     "phone": "780-424-8335",
     "address": "15625 Stony Plain Road NW, Edmonton, AB",
-    "coordinates": [53.5455, -113.5860],
+    "coordinates": [
+      53.5455,
+      -113.586
+    ],
     "isDropOff": true,
     "isMobile": false,
     "coverageArea": null,
@@ -1282,9 +2096,16 @@
       "type": "24/7"
     },
     "accessibility": "public",
-    "accessNotes": "Walk-in. Serves intoxicated adults needing safe sobering.",
-    "serves": ["adults", "all-genders"],
-    "services": ["detox", "sobering"],
+    "accessNotes": "Walk-in triage daily 8:30–9:30am at southwest door of Aurora Centre. No doctor referral needed. For intoxicated adults needing safe sobering and medically supported withdrawal. Call 780-424-8335 (24hrs) for out-of-town or special circumstances.",
+    "serves": [
+      "adults",
+      "all-genders",
+      "substance-use"
+    ],
+    "services": [
+      "detox",
+      "sobering"
+    ],
     "transport": false,
     "transportNotes": null,
     "referralRequired": false,
@@ -1292,30 +2113,48 @@
     "pilotEndDate": null,
     "status": "active",
     "parentService": null,
-    "childServices": [],
-    "connections": ["george-spady-aurora"],
+    "childServices": [
+      "george-spady-aurora"
+    ],
+    "connections": [
+      "george-spady-aurora",
+      "cdt",
+      "access-247"
+    ],
     "category": "detox",
-    "tags": ["detox", "sobering", "walk-in", "24/7"],
+    "tags": [
+      "detox",
+      "sobering",
+      "walk-in",
+      "24/7"
+    ],
     "verification": {
       "status": "unverified",
-      "lastVerified": null,
+      "lastVerified": "2026-02-16",
       "verifiedBy": null,
-      "confidence": "medium",
-      "notes": "Relocated to Aurora Centre Aug 2025 — address and operations need verification",
-      "fieldsToCheck": ["hours", "phone", "address"]
+      "confidence": "high",
+      "notes": "Triage hours 8:30–9:30am verified from gspady.org (Feb 2026). Aurora Centre relocation Aug 2025 confirmed. 41 detox + 19 pre-treatment beds.",
+      "fieldsToCheck": [
+        "hours",
+        "phone",
+        "address"
+      ]
     }
   },
   {
     "id": "george-spady-aurora",
-    "name": "George Spady Aurora Centre — Crisis Stabilization",
+    "name": "George Spady Aurora Centre — Pre-Treatment Program",
     "shortName": "Aurora Centre",
     "entryPoint": "direct",
     "operator": "George Spady Society",
-    "description": "Crisis stabilization and short-term residential support. Located at Aurora Centre (opened Aug 2025).",
+    "description": "Pre-treatment bridge program at Aurora Centre (same building as detox). 19 beds for individuals transitioning from withdrawal management to formal addiction treatment programs. No separate intake — admitted through detox program.",
     "phone": "780-424-8335",
     "address": "15625 Stony Plain Road NW, Edmonton, AB",
-    "coordinates": [53.5455, -113.5860],
-    "isDropOff": true,
+    "coordinates": [
+      53.5455,
+      -113.586
+    ],
+    "isDropOff": false,
     "isMobile": false,
     "coverageArea": null,
     "coverageDescription": null,
@@ -1324,26 +2163,44 @@
     },
     "accessibility": "public-criteria",
     "accessNotes": "Walk-in with intake assessment. Crisis stabilization.",
-    "serves": ["adults", "all-genders"],
-    "services": ["crisis-stabilization", "short-term-residential"],
+    "serves": [
+      "adults",
+      "all-genders"
+    ],
+    "services": [
+      "crisis-stabilization",
+      "short-term-residential"
+    ],
     "transport": false,
     "transportNotes": null,
     "referralRequired": false,
     "pilotProgram": false,
     "pilotEndDate": null,
     "status": "active",
-    "parentService": null,
+    "parentService": "george-spady-detox",
     "childServices": [],
-    "connections": ["george-spady-detox"],
+    "connections": [
+      "george-spady-detox",
+      "access-247"
+    ],
     "category": "crisis-stabilization",
-    "tags": ["crisis", "stabilization", "residential"],
+    "tags": [
+      "crisis",
+      "stabilization",
+      "residential",
+      "24/7"
+    ],
     "verification": {
       "status": "unverified",
-      "lastVerified": null,
+      "lastVerified": "2026-02-16",
       "verifiedBy": null,
       "confidence": "medium",
-      "notes": "Relocated to Aurora Centre Aug 2025 — address and operations need verification",
-      "fieldsToCheck": ["hours", "phone", "address"]
+      "notes": "Pre-treatment program confirmed at Aurora Centre (Feb 2026). 19 beds. Restructured as child of george-spady-detox. Details approximate.",
+      "fieldsToCheck": [
+        "hours",
+        "phone",
+        "address"
+      ]
     }
   },
   {
@@ -1353,9 +2210,12 @@
     "entryPoint": "direct",
     "operator": "NiGiNan Housing Ventures",
     "description": "Indigenous-led permanent supportive housing. 42 units. 24/7 wraparound services. Harm reduction model with managed alcohol/cannabis programs. Cultural supports with Elders.",
-    "phone": "587-686-7788",
+    "phone": "780-784-6150",
     "address": "9629 106 Avenue NW, Edmonton, AB",
-    "coordinates": [53.5472, -113.5091],
+    "coordinates": [
+      53.5472,
+      -113.5091
+    ],
     "isDropOff": false,
     "isMobile": false,
     "coverageArea": null,
@@ -1365,8 +2225,17 @@
     },
     "accessibility": "restricted",
     "accessNotes": "Not a drop-in or emergency shelter. Permanent supportive housing with application process.",
-    "serves": ["adults", "all-genders", "indigenous"],
-    "services": ["permanent-housing", "harm-reduction", "cultural-support", "managed-substances"],
+    "serves": [
+      "adults",
+      "all-genders",
+      "indigenous"
+    ],
+    "services": [
+      "permanent-housing",
+      "harm-reduction",
+      "cultural-support",
+      "managed-substances"
+    ],
     "transport": false,
     "transportNotes": null,
     "referralRequired": true,
@@ -1375,16 +2244,28 @@
     "status": "active",
     "parentService": null,
     "childServices": [],
-    "connections": [],
+    "connections": [
+      "hope-mission",
+      "boyle-street",
+      "cdt"
+    ],
     "category": "housing",
-    "tags": ["indigenous", "housing", "harm-reduction", "cultural"],
+    "tags": [
+      "indigenous",
+      "housing",
+      "harm-reduction",
+      "cultural",
+      "24/7"
+    ],
     "verification": {
       "status": "unverified",
       "lastVerified": null,
       "verifiedBy": null,
       "confidence": "medium",
-      "notes": "Not emergency shelter — housing program details from web research",
-      "fieldsToCheck": ["phone", "services"]
+      "notes": "Phone updated to 780-784-6150 per niginan.ca and Yellow Pages (Feb 2026). Not emergency shelter — housing program.",
+      "fieldsToCheck": [
+        "services"
+      ]
     }
   },
   {
@@ -1396,7 +2277,10 @@
     "description": "Major hospital with emergency department. Inner-city location, significant volume of crisis-related cases.",
     "phone": "780-735-4111",
     "address": "10240 Kingsway Avenue NW, Edmonton, AB",
-    "coordinates": [53.5692, -113.4949],
+    "coordinates": [
+      53.5692,
+      -113.4949
+    ],
     "isDropOff": true,
     "isMobile": false,
     "coverageArea": null,
@@ -1406,8 +2290,13 @@
     },
     "accessibility": "public",
     "accessNotes": "Emergency department open 24/7.",
-    "serves": ["all"],
-    "services": ["emergency-medical", "psychiatric-emergency"],
+    "serves": [
+      "all"
+    ],
+    "services": [
+      "emergency-medical",
+      "psychiatric-emergency"
+    ],
     "transport": false,
     "transportNotes": null,
     "referralRequired": false,
@@ -1416,16 +2305,25 @@
     "status": "active",
     "parentService": null,
     "childServices": [],
-    "connections": ["access-247", "health-access-mobile"],
+    "connections": [
+      "access-247",
+      "health-access-mobile"
+    ],
     "category": "hospital",
-    "tags": ["hospital", "emergency", "24/7"],
+    "tags": [
+      "hospital",
+      "emergency",
+      "24/7"
+    ],
     "verification": {
       "status": "unverified",
       "lastVerified": null,
       "verifiedBy": null,
       "confidence": "medium",
       "notes": "Standard hospital hours assumed, should verify psychiatric emergency capacity",
-      "fieldsToCheck": ["phone"]
+      "fieldsToCheck": [
+        "phone"
+      ]
     }
   },
   {
@@ -1437,7 +2335,10 @@
     "description": "Major hospital with emergency and psychiatric services.",
     "phone": "780-407-8822",
     "address": "8440 112 Street NW, Edmonton, AB",
-    "coordinates": [53.5211, -113.5258],
+    "coordinates": [
+      53.5211,
+      -113.5258
+    ],
     "isDropOff": true,
     "isMobile": false,
     "coverageArea": null,
@@ -1447,8 +2348,13 @@
     },
     "accessibility": "public",
     "accessNotes": "Emergency department open 24/7.",
-    "serves": ["all"],
-    "services": ["emergency-medical", "psychiatric-emergency"],
+    "serves": [
+      "all"
+    ],
+    "services": [
+      "emergency-medical",
+      "psychiatric-emergency"
+    ],
     "transport": false,
     "transportNotes": null,
     "referralRequired": false,
@@ -1457,16 +2363,25 @@
     "status": "active",
     "parentService": null,
     "childServices": [],
-    "connections": [],
+    "connections": [
+      "access-247",
+      "pact"
+    ],
     "category": "hospital",
-    "tags": ["hospital", "emergency", "24/7"],
+    "tags": [
+      "hospital",
+      "emergency",
+      "24/7"
+    ],
     "verification": {
       "status": "unverified",
       "lastVerified": null,
       "verifiedBy": null,
       "confidence": "medium",
       "notes": "Standard hospital hours assumed, should verify psychiatric emergency capacity",
-      "fieldsToCheck": ["phone"]
+      "fieldsToCheck": [
+        "phone"
+      ]
     }
   },
   {
@@ -1478,7 +2393,10 @@
     "description": "Emergency shelter for youth aged 15-21 experiencing homelessness. Daytime programs serve ages 15-24.",
     "phone": "780-468-7070",
     "address": "9310 82 Avenue NW, Edmonton, AB",
-    "coordinates": [53.5190, -113.4880],
+    "coordinates": [
+      53.519,
+      -113.488
+    ],
     "isDropOff": true,
     "isMobile": false,
     "coverageArea": null,
@@ -1488,8 +2406,15 @@
     },
     "accessibility": "public-criteria",
     "accessNotes": "Emergency shelter for youth aged 15-21. Daytime programs serve ages 15-24. Walk-in during intake hours.",
-    "serves": ["youth", "all-genders"],
-    "services": ["emergency-shelter", "youth-services", "case-management"],
+    "serves": [
+      "youth",
+      "all-genders"
+    ],
+    "services": [
+      "emergency-shelter",
+      "youth-services",
+      "case-management"
+    ],
     "transport": false,
     "transportNotes": null,
     "referralRequired": false,
@@ -1498,16 +2423,28 @@
     "status": "active",
     "parentService": null,
     "childServices": [],
-    "connections": [],
+    "connections": [
+      "cdt",
+      "988-crisis-line",
+      "access-247",
+      "ihuman"
+    ],
     "category": "shelter",
-    "tags": ["youth", "shelter", "24/7"],
+    "tags": [
+      "youth",
+      "shelter",
+      "24/7"
+    ],
     "verification": {
       "status": "unverified",
       "lastVerified": null,
       "verifiedBy": null,
       "confidence": "medium",
       "notes": "Well-known youth service, age ranges from web research",
-      "fieldsToCheck": ["hours", "phone"]
+      "fieldsToCheck": [
+        "hours",
+        "phone"
+      ]
     }
   },
   {
@@ -1529,8 +2466,14 @@
     },
     "accessibility": "public",
     "accessNotes": "Anyone can call or text 988. Free, confidential, 24/7.",
-    "serves": ["all"],
-    "services": ["suicide-prevention", "crisis-intervention", "mental-health-support"],
+    "serves": [
+      "all"
+    ],
+    "services": [
+      "suicide-prevention",
+      "crisis-intervention",
+      "mental-health-support"
+    ],
     "transport": false,
     "transportNotes": null,
     "referralRequired": false,
@@ -1539,15 +2482,1009 @@
     "status": "active",
     "parentService": null,
     "childServices": [],
-    "connections": ["access-247"],
+    "connections": [
+      "access-247",
+      "cdt"
+    ],
     "category": "mental-health",
-    "tags": ["suicide", "crisis", "24/7", "phone", "text", "national"],
+    "tags": [
+      "suicide",
+      "crisis",
+      "24/7",
+      "phone",
+      "text",
+      "national"
+    ],
     "verification": {
       "status": "unverified",
       "lastVerified": null,
       "verifiedBy": null,
       "confidence": "high",
       "notes": "National service, details well-documented",
+      "fieldsToCheck": []
+    }
+  },
+  {
+    "id": "mustard-seed-central",
+    "name": "Mustard Seed — Central Shelter",
+    "shortName": "Mustard Seed Central",
+    "entryPoint": "direct",
+    "operator": "The Mustard Seed",
+    "description": "124-bed emergency shelter open to all adults. Walk-in, behaviour-based admission. Dry facility (being under the influence is not grounds for refusal). Nurse-led health services, meals, showers, housing case management. Opened Dec 2023.",
+    "phone": "780-919-1735",
+    "address": "9526 106 Avenue NW, Edmonton, AB",
+    "coordinates": [
+      53.5468,
+      -113.5065
+    ],
+    "isDropOff": true,
+    "isMobile": false,
+    "coverageArea": null,
+    "coverageDescription": null,
+    "hours": {
+      "type": "24/7"
+    },
+    "accessibility": "public",
+    "accessNotes": "Walk-in. Emergency shelter for adults.",
+    "serves": [
+      "adults",
+      "all-genders"
+    ],
+    "services": [
+      "emergency-shelter",
+      "meals",
+      "health-services"
+    ],
+    "transport": false,
+    "transportNotes": null,
+    "referralRequired": false,
+    "pilotProgram": false,
+    "pilotEndDate": null,
+    "status": "active",
+    "parentService": null,
+    "childServices": [],
+    "connections": [
+      "hope-mission",
+      "cdt",
+      "mustard-seed-strathcona",
+      "wicihaw-maskokamik"
+    ],
+    "category": "shelter",
+    "tags": [
+      "shelter",
+      "walk-in",
+      "24/7",
+      "meals",
+      "health"
+    ],
+    "verification": {
+      "status": "unverified",
+      "lastVerified": "2026-02-16",
+      "verifiedBy": null,
+      "confidence": "high",
+      "notes": "Phone updated to 780-919-1735 (theseed.ca + alberta.ca, Feb 2026). Description enriched with bed count, admission policy, services.",
+      "fieldsToCheck": [
+        "hours"
+      ]
+    }
+  },
+  {
+    "id": "mustard-seed-strathcona",
+    "name": "Mustard Seed — Strathcona Shelter",
+    "shortName": "Mustard Seed Strathcona",
+    "entryPoint": "direct",
+    "operator": "The Mustard Seed",
+    "description": "45-bed emergency shelter open to all adults on Edmonton's south side. Walk-in admission. Meals, hot showers, laundry, hygiene supplies, and advocacy services.",
+    "phone": "780-619-9885",
+    "address": "10050 81 Avenue NW, Edmonton, AB",
+    "coordinates": [
+      53.5182,
+      -113.4975
+    ],
+    "isDropOff": true,
+    "isMobile": false,
+    "coverageArea": null,
+    "coverageDescription": null,
+    "hours": {
+      "type": "24/7"
+    },
+    "accessibility": "public",
+    "accessNotes": "Walk-in. Emergency shelter for adults.",
+    "serves": [
+      "adults",
+      "all-genders"
+    ],
+    "services": [
+      "emergency-shelter",
+      "meals"
+    ],
+    "transport": false,
+    "transportNotes": null,
+    "referralRequired": false,
+    "pilotProgram": false,
+    "pilotEndDate": null,
+    "status": "active",
+    "parentService": null,
+    "childServices": [],
+    "connections": [
+      "cdt",
+      "mustard-seed-central"
+    ],
+    "category": "shelter",
+    "tags": [
+      "shelter",
+      "walk-in",
+      "24/7",
+      "meals"
+    ],
+    "verification": {
+      "status": "unverified",
+      "lastVerified": "2026-02-16",
+      "verifiedBy": null,
+      "confidence": "high",
+      "notes": "Phone updated to 780-619-9885 (theseed.ca + alberta.ca, Feb 2026). Description enriched with bed count and services.",
+      "fieldsToCheck": [
+        "hours"
+      ]
+    }
+  },
+  {
+    "id": "distress-line",
+    "name": "Edmonton Distress Line",
+    "shortName": "Distress Line",
+    "entryPoint": "direct",
+    "operator": "CMHA Edmonton",
+    "description": "24/7 confidential phone support for anyone in distress. Call 780-482-HELP (4357).",
+    "phone": "780-482-4357",
+    "address": null,
+    "coordinates": null,
+    "isDropOff": false,
+    "isMobile": false,
+    "coverageArea": "edmonton",
+    "coverageDescription": "Edmonton and area phone support",
+    "hours": {
+      "type": "24/7"
+    },
+    "accessibility": "public",
+    "accessNotes": "Anyone can call. Free, confidential, 24/7.",
+    "serves": [
+      "all"
+    ],
+    "services": [
+      "crisis-intervention",
+      "mental-health-support"
+    ],
+    "transport": false,
+    "transportNotes": null,
+    "referralRequired": false,
+    "pilotProgram": false,
+    "pilotEndDate": null,
+    "status": "active",
+    "parentService": null,
+    "childServices": [],
+    "connections": [
+      "988-crisis-line",
+      "access-247"
+    ],
+    "category": "mental-health",
+    "tags": [
+      "crisis",
+      "phone",
+      "24/7",
+      "mental-health",
+      "distress"
+    ],
+    "verification": {
+      "status": "unverified",
+      "lastVerified": null,
+      "verifiedBy": null,
+      "confidence": "high",
+      "notes": "CMHA Edmonton well-known service. Phone confirmed via cmhaedmonton.ca (Feb 2026).",
+      "fieldsToCheck": []
+    }
+  },
+  {
+    "id": "ihuman",
+    "name": "iHuman Youth Society",
+    "shortName": "iHuman",
+    "entryPoint": "direct",
+    "operator": "iHuman Youth Society",
+    "description": "120 daytime shelter spaces for vulnerable youth. Arts-based programming and support services.",
+    "phone": "780-477-6648",
+    "address": "10231 107 Street NW, Edmonton, AB",
+    "coordinates": [
+      53.546,
+      -113.504
+    ],
+    "isDropOff": true,
+    "isMobile": false,
+    "coverageArea": null,
+    "coverageDescription": null,
+    "hours": {
+      "type": "scheduled",
+      "schedule": [
+        {
+          "days": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "open": 900,
+          "close": 1700
+        }
+      ],
+      "notes": "Daytime drop-in hours — verify exact schedule with iHuman."
+    },
+    "accessibility": "public-criteria",
+    "accessNotes": "Youth drop-in. Arts-based programming for vulnerable youth.",
+    "serves": [
+      "youth",
+      "all-genders"
+    ],
+    "services": [
+      "youth-services",
+      "drop-in",
+      "arts-programming"
+    ],
+    "transport": false,
+    "transportNotes": null,
+    "referralRequired": false,
+    "pilotProgram": false,
+    "pilotEndDate": null,
+    "status": "active",
+    "parentService": null,
+    "childServices": [],
+    "connections": [
+      "yess",
+      "cdt"
+    ],
+    "category": "drop-in",
+    "tags": [
+      "youth",
+      "drop-in",
+      "arts",
+      "daytime"
+    ],
+    "verification": {
+      "status": "unverified",
+      "lastVerified": null,
+      "verifiedBy": null,
+      "confidence": "medium",
+      "notes": "Address and phone from ihumanyouthsociety.org. Exact hours need verification.",
+      "fieldsToCheck": [
+        "hours"
+      ]
+    }
+  },
+  {
+    "id": "211",
+    "name": "211 Alberta",
+    "shortName": "211",
+    "entryPoint": "direct",
+    "operator": "211 Alberta (United Way)",
+    "description": "Provincial information and referral helpline. Press 3 for Crisis Diversion Team dispatch.",
+    "phone": "211",
+    "address": null,
+    "coordinates": null,
+    "isDropOff": false,
+    "isMobile": false,
+    "coverageArea": "provincial",
+    "coverageDescription": "Alberta-wide phone service",
+    "hours": {
+      "type": "24/7"
+    },
+    "accessibility": "public",
+    "accessNotes": "Anyone can call 211. Press 3 for crisis diversion.",
+    "serves": [
+      "all"
+    ],
+    "services": [
+      "information-referral",
+      "crisis-dispatch"
+    ],
+    "transport": false,
+    "transportNotes": null,
+    "referralRequired": false,
+    "pilotProgram": false,
+    "pilotEndDate": null,
+    "status": "active",
+    "parentService": null,
+    "childServices": [],
+    "connections": [
+      "cdt"
+    ],
+    "category": "entry-point",
+    "tags": [
+      "phone",
+      "24/7",
+      "entry-point"
+    ],
+    "verification": {
+      "status": "unverified",
+      "lastVerified": null,
+      "verifiedBy": null,
+      "confidence": "high",
+      "notes": "Well-known provincial service",
+      "fieldsToCheck": []
+    }
+  },
+  {
+    "id": "eps",
+    "name": "Edmonton Police Service",
+    "shortName": "EPS",
+    "entryPoint": "911",
+    "operator": "Edmonton Police Service",
+    "description": "Municipal police service. Entry point for emergency response via 911. Non-emergency line: 780-423-4567.",
+    "phone": "911",
+    "address": null,
+    "coordinates": null,
+    "isDropOff": false,
+    "isMobile": false,
+    "coverageArea": "citywide",
+    "coverageDescription": "City of Edmonton",
+    "hours": {
+      "type": "24/7"
+    },
+    "accessibility": "public",
+    "accessNotes": "Call 911 for emergencies. Non-emergency: 780-423-4567.",
+    "serves": [
+      "all"
+    ],
+    "services": [
+      "emergency-response",
+      "safety"
+    ],
+    "transport": false,
+    "transportNotes": null,
+    "referralRequired": false,
+    "pilotProgram": false,
+    "pilotEndDate": null,
+    "status": "active",
+    "parentService": null,
+    "childServices": [
+      "eps-patrol",
+      "eps-beats",
+      "eps-help"
+    ],
+    "connections": [
+      "eps-patrol",
+      "eps-beats",
+      "eps-help",
+      "pact",
+      "cdt",
+      "uhei"
+    ],
+    "category": "entry-point",
+    "tags": [
+      "police",
+      "emergency",
+      "24/7",
+      "entry-point"
+    ],
+    "verification": {
+      "status": "unverified",
+      "lastVerified": null,
+      "verifiedBy": null,
+      "confidence": "high",
+      "notes": "Well-known municipal service",
+      "fieldsToCheck": []
+    }
+  },
+  {
+    "id": "e4c-weac",
+    "name": "E4C — Women's Emergency Accommodation Centre",
+    "shortName": "WEAC",
+    "entryPoint": "direct",
+    "operator": "E4C",
+    "description": "Emergency shelter for women (~64 beds). Registration begins 7am daily, intake list renews daily — individuals contacted as beds become available. Meals (3/day), showers, laundry, safe medication administration, outreach support, housing placement assistance.",
+    "phone": "780-423-5302",
+    "address": "9611 101A Avenue NW, Edmonton, AB",
+    "coordinates": [
+      53.5436,
+      -113.4826
+    ],
+    "isDropOff": true,
+    "isMobile": false,
+    "coverageArea": null,
+    "coverageDescription": null,
+    "hours": {
+      "type": "24/7"
+    },
+    "accessibility": "public-criteria",
+    "accessNotes": "Women only. Registration begins 7am daily. Intake list renews each day — individuals contacted as beds become available. Walk-in to register, then wait for callback. 780-423-5302.",
+    "serves": [
+      "adult-women"
+    ],
+    "services": [
+      "emergency-shelter",
+      "meals",
+      "health-services"
+    ],
+    "transport": false,
+    "transportNotes": null,
+    "referralRequired": false,
+    "pilotProgram": false,
+    "pilotEndDate": null,
+    "status": "active",
+    "parentService": null,
+    "childServices": [],
+    "connections": [
+      "cdt",
+      "hope-mission",
+      "community-of-hope",
+      "win-house"
+    ],
+    "category": "shelter",
+    "tags": [
+      "shelter",
+      "women",
+      "walk-in",
+      "24/7",
+      "meals",
+      "health"
+    ],
+    "verification": {
+      "status": "unverified",
+      "lastVerified": "2026-02-16",
+      "verifiedBy": null,
+      "confidence": "high",
+      "notes": "Phone 780-423-5302 and address verified (211.ca + alberta.ca, Feb 2026). ~64 beds. Registration 7am daily.",
+      "fieldsToCheck": [
+        "hours",
+        "phone"
+      ]
+    }
+  },
+  {
+    "id": "wicihaw-maskokamik",
+    "name": "Wîhcihaw Maskokamik — Enoch Cree Nation Emergency Shelter",
+    "shortName": "Wîhcihaw Maskokamik",
+    "entryPoint": "direct",
+    "operator": "Enoch Cree Nation",
+    "description": "Indigenous-operated emergency shelter at the former Coliseum Inn. ~100 beds. Intake hours 7am–7pm daily (not a walk-in drop-in — intake must be completed first). Culturally safe emergency accommodation. Three meals/day, showers, on-site housing support.",
+    "phone": "587-525-8222",
+    "address": "11845 Wayne Gretzky Drive NW, Edmonton, AB",
+    "coordinates": [
+      53.5715,
+      -113.4536
+    ],
+    "isDropOff": true,
+    "isMobile": false,
+    "coverageArea": null,
+    "coverageDescription": null,
+    "hours": {
+      "type": "24/7",
+      "notes": "Hours assumed 24/7 — needs verification"
+    },
+    "accessibility": "public-criteria",
+    "accessNotes": "Intake hours 7am–7pm daily. Not a walk-in drop-in — individuals must complete intake process before receiving shelter services. All genders 18+. Call 587-525-8222.",
+    "serves": [
+      "adults",
+      "all-genders",
+      "indigenous"
+    ],
+    "services": [
+      "emergency-shelter",
+      "cultural-support"
+    ],
+    "transport": false,
+    "transportNotes": null,
+    "referralRequired": false,
+    "pilotProgram": false,
+    "pilotEndDate": null,
+    "status": "active",
+    "parentService": null,
+    "childServices": [],
+    "connections": [
+      "cdt",
+      "ambrose-place",
+      "hope-mission",
+      "mustard-seed-central"
+    ],
+    "category": "shelter",
+    "tags": [
+      "shelter",
+      "indigenous",
+      "walk-in",
+      "24/7"
+    ],
+    "verification": {
+      "status": "unverified",
+      "lastVerified": "2026-02-16",
+      "verifiedBy": null,
+      "confidence": "medium",
+      "notes": "Phone 587-525-8222 found (211.ca + alberta.ca, Feb 2026). ~100 beds per Homeward Trust. Intake hours 7am–7pm approximate — still needs direct verification.",
+      "fieldsToCheck": [
+        "phone",
+        "hours",
+        "accessibility"
+      ]
+    }
+  },
+  {
+    "id": "community-of-hope",
+    "name": "Community of Hope — Elizabeth Fry Society",
+    "shortName": "Community of Hope",
+    "entryPoint": "direct",
+    "operator": "Elizabeth Fry Society of Northern Alberta",
+    "description": "Emergency shelter for women and gender-diverse individuals aged 18+. Up to 96 beds. First come, first served. 24/7 operation. Located at Station Pointe near Belvedere LRT.",
+    "phone": "587-735-5000",
+    "address": "504 Belvedere Way NW, Edmonton, AB",
+    "coordinates": [
+      53.5883,
+      -113.4328
+    ],
+    "isDropOff": true,
+    "isMobile": false,
+    "coverageArea": null,
+    "coverageDescription": null,
+    "hours": {
+      "type": "24/7",
+      "notes": "Hours assumed 24/7 — needs verification"
+    },
+    "accessibility": "public-criteria",
+    "accessNotes": "Emergency shelter for women and gender-diverse individuals.",
+    "serves": [
+      "adult-women",
+      "gender-diverse"
+    ],
+    "services": [
+      "emergency-shelter"
+    ],
+    "transport": false,
+    "transportNotes": null,
+    "referralRequired": false,
+    "pilotProgram": false,
+    "pilotEndDate": null,
+    "status": "active",
+    "parentService": null,
+    "childServices": [],
+    "connections": [
+      "cdt",
+      "e4c-weac",
+      "lurana-shelter"
+    ],
+    "category": "shelter",
+    "tags": [
+      "shelter",
+      "women",
+      "gender-diverse",
+      "24/7"
+    ],
+    "verification": {
+      "status": "unverified",
+      "lastVerified": "2026-02-16",
+      "verifiedBy": null,
+      "confidence": "medium",
+      "notes": "Phone 587-735-5000 found (efrynorthernalberta.com + alberta.ca, Feb 2026). 96 beds confirmed. Intake process needs verification.",
+      "fieldsToCheck": [
+        "phone",
+        "hours",
+        "accessibility"
+      ]
+    }
+  },
+  {
+    "id": "win-house",
+    "name": "WIN House — Women in Need",
+    "shortName": "WIN House",
+    "entryPoint": "direct",
+    "operator": "WIN House",
+    "description": "Emergency shelter for women and children fleeing domestic violence. Address confidential for safety. 24-hour crisis line available.",
+    "phone": "780-479-0058",
+    "address": null,
+    "coordinates": null,
+    "isDropOff": false,
+    "isMobile": false,
+    "coverageArea": null,
+    "coverageDescription": null,
+    "hours": {
+      "type": "24/7"
+    },
+    "accessibility": "public-criteria",
+    "accessNotes": "For women and children fleeing domestic violence. Call crisis line first. Address confidential.",
+    "serves": [
+      "adult-women",
+      "children"
+    ],
+    "services": [
+      "emergency-shelter",
+      "crisis-intervention",
+      "dv-support"
+    ],
+    "transport": false,
+    "transportNotes": null,
+    "referralRequired": false,
+    "pilotProgram": false,
+    "pilotEndDate": null,
+    "status": "active",
+    "parentService": null,
+    "childServices": [],
+    "connections": [
+      "family-violence-line",
+      "cdt",
+      "lurana-shelter",
+      "e4c-weac"
+    ],
+    "category": "shelter",
+    "tags": [
+      "shelter",
+      "women",
+      "domestic-violence",
+      "24/7",
+      "children"
+    ],
+    "verification": {
+      "status": "unverified",
+      "lastVerified": "2026-02-16",
+      "verifiedBy": null,
+      "confidence": "medium",
+      "notes": "Connections to lurana-shelter and e4c-weac added (Feb 2026). Phone from domesticshelters.org. Address intentionally confidential.",
+      "fieldsToCheck": [
+        "phone",
+        "hours"
+      ]
+    }
+  },
+  {
+    "id": "lurana-shelter",
+    "name": "Lurana Shelter",
+    "shortName": "Lurana Shelter",
+    "entryPoint": "direct",
+    "operator": "Lurana Shelter Society",
+    "description": "32-bed emergency shelter for women and children fleeing domestic violence. Address confidential for safety.",
+    "phone": "780-424-5875",
+    "address": null,
+    "coordinates": null,
+    "isDropOff": false,
+    "isMobile": false,
+    "coverageArea": null,
+    "coverageDescription": null,
+    "hours": {
+      "type": "24/7"
+    },
+    "accessibility": "public-criteria",
+    "accessNotes": "For women and children fleeing domestic violence. Call crisis line first. Address confidential.",
+    "serves": [
+      "adult-women",
+      "children"
+    ],
+    "services": [
+      "emergency-shelter",
+      "dv-support"
+    ],
+    "transport": false,
+    "transportNotes": null,
+    "referralRequired": false,
+    "pilotProgram": false,
+    "pilotEndDate": null,
+    "status": "active",
+    "parentService": null,
+    "childServices": [],
+    "connections": [
+      "family-violence-line",
+      "win-house",
+      "cdt",
+      "e4c-weac"
+    ],
+    "category": "shelter",
+    "tags": [
+      "shelter",
+      "women",
+      "domestic-violence",
+      "24/7",
+      "children"
+    ],
+    "verification": {
+      "status": "unverified",
+      "lastVerified": "2026-02-16",
+      "verifiedBy": null,
+      "confidence": "medium",
+      "notes": "Connection to e4c-weac added (Feb 2026). Phone from domesticshelters.org. Address intentionally confidential.",
+      "fieldsToCheck": [
+        "phone",
+        "hours"
+      ]
+    }
+  },
+  {
+    "id": "family-violence-line",
+    "name": "Family Violence Info Line",
+    "shortName": "310-1818",
+    "entryPoint": "direct",
+    "operator": "Government of Alberta",
+    "description": "Provincial 24/7 crisis line for family violence. Call or text 310-1818 (no area code needed). Multilingual support available.",
+    "phone": "310-1818",
+    "address": null,
+    "coordinates": null,
+    "isDropOff": false,
+    "isMobile": false,
+    "coverageArea": "provincial",
+    "coverageDescription": "Alberta-wide crisis line",
+    "hours": {
+      "type": "24/7"
+    },
+    "accessibility": "public",
+    "accessNotes": "Anyone can call or text 310-1818. Free, confidential, 24/7. No area code needed.",
+    "serves": [
+      "all"
+    ],
+    "services": [
+      "crisis-intervention",
+      "dv-support",
+      "referral",
+      "safety-planning"
+    ],
+    "transport": false,
+    "transportNotes": null,
+    "referralRequired": false,
+    "pilotProgram": false,
+    "pilotEndDate": null,
+    "status": "active",
+    "parentService": null,
+    "childServices": [],
+    "connections": [
+      "win-house",
+      "lurana-shelter"
+    ],
+    "category": "crisis-line",
+    "tags": [
+      "crisis",
+      "phone",
+      "text",
+      "24/7",
+      "domestic-violence",
+      "provincial"
+    ],
+    "verification": {
+      "status": "unverified",
+      "lastVerified": null,
+      "verifiedBy": null,
+      "confidence": "high",
+      "notes": "Provincial government service. Confirmed via alberta.ca/family-violence-find-supports (Feb 2026).",
+      "fieldsToCheck": []
+    }
+  },
+  {
+    "id": "cast-youth",
+    "name": "CAST — Crisis and Stabilization Team (Children & Youth)",
+    "shortName": "CAST",
+    "entryPoint": "AHS",
+    "operator": "Alberta Health Services (Recovery Alberta)",
+    "description": "Immediate crisis support for children and youth ages 5-17 and their care providers. Phone-based crisis intervention and stabilization.",
+    "phone": "780-407-1000",
+    "address": null,
+    "coordinates": null,
+    "isDropOff": false,
+    "isMobile": false,
+    "coverageArea": "edmonton",
+    "coverageDescription": "Edmonton Zone — crisis support for children/youth 5-17",
+    "hours": {
+      "type": "24/7",
+      "notes": "Crisis line available 24/7 — verify if mobile response hours differ"
+    },
+    "accessibility": "public",
+    "accessNotes": "Anyone can call for a child/youth in crisis. Ages 5-17.",
+    "serves": [
+      "children",
+      "youth"
+    ],
+    "services": [
+      "crisis-intervention",
+      "mental-health-support",
+      "stabilization"
+    ],
+    "transport": false,
+    "transportNotes": null,
+    "referralRequired": false,
+    "pilotProgram": false,
+    "pilotEndDate": null,
+    "status": "active",
+    "parentService": null,
+    "childServices": [],
+    "connections": [
+      "access-247",
+      "yess",
+      "kids-help-phone",
+      "988-crisis-line"
+    ],
+    "category": "mental-health",
+    "tags": [
+      "youth",
+      "children",
+      "crisis",
+      "phone",
+      "24/7",
+      "AHS",
+      "mental-health"
+    ],
+    "verification": {
+      "status": "unverified",
+      "lastVerified": "2026-02-16",
+      "verifiedBy": null,
+      "confidence": "medium",
+      "notes": "Connection to 988 added (Feb 2026). Phone 780-407-1000 confirmed via 211 Alberta.",
+      "fieldsToCheck": [
+        "hours"
+      ]
+    }
+  },
+  {
+    "id": "kids-help-phone",
+    "name": "Kids Help Phone",
+    "shortName": "Kids Help Phone",
+    "entryPoint": "direct",
+    "operator": "Kids Help Phone",
+    "description": "National 24/7 crisis line for young people. Call 1-800-668-6868 or text CONNECT to 686868. Professional counsellors available.",
+    "phone": "1-800-668-6868",
+    "address": null,
+    "coordinates": null,
+    "isDropOff": false,
+    "isMobile": false,
+    "coverageArea": "national",
+    "coverageDescription": "Canada-wide youth crisis line",
+    "hours": {
+      "type": "24/7"
+    },
+    "accessibility": "public",
+    "accessNotes": "Anyone can call or text. Free, confidential, 24/7. Text CONNECT to 686868.",
+    "serves": [
+      "youth",
+      "children"
+    ],
+    "services": [
+      "crisis-intervention",
+      "mental-health-support",
+      "counselling"
+    ],
+    "transport": false,
+    "transportNotes": null,
+    "referralRequired": false,
+    "pilotProgram": false,
+    "pilotEndDate": null,
+    "status": "active",
+    "parentService": null,
+    "childServices": [],
+    "connections": [
+      "988-crisis-line",
+      "cast-youth",
+      "yess",
+      "distress-line"
+    ],
+    "category": "crisis-line",
+    "tags": [
+      "youth",
+      "children",
+      "crisis",
+      "phone",
+      "text",
+      "24/7",
+      "national"
+    ],
+    "verification": {
+      "status": "unverified",
+      "lastVerified": "2026-02-16",
+      "verifiedBy": null,
+      "confidence": "high",
+      "notes": "Connection to distress-line added (Feb 2026). National service, well-documented.",
+      "fieldsToCheck": []
+    }
+  },
+  {
+    "id": "mmiwg-crisis-line",
+    "name": "MMIWG Crisis Line",
+    "shortName": "MMIWG Line",
+    "entryPoint": "direct",
+    "operator": "Government of Canada",
+    "description": "24/7 crisis line providing emotional support and crisis referral for those affected by the issue of Missing and Murdered Indigenous Women and Girls.",
+    "phone": "1-844-413-6649",
+    "address": null,
+    "coordinates": null,
+    "isDropOff": false,
+    "isMobile": false,
+    "coverageArea": "national",
+    "coverageDescription": "Canada-wide Indigenous crisis line",
+    "hours": {
+      "type": "24/7"
+    },
+    "accessibility": "public",
+    "accessNotes": "Anyone can call. Free, confidential, 24/7. Culturally safe support.",
+    "serves": [
+      "all",
+      "indigenous"
+    ],
+    "services": [
+      "crisis-intervention",
+      "emotional-support",
+      "referral"
+    ],
+    "transport": false,
+    "transportNotes": null,
+    "referralRequired": false,
+    "pilotProgram": false,
+    "pilotEndDate": null,
+    "status": "active",
+    "parentService": null,
+    "childServices": [],
+    "connections": [
+      "distress-line",
+      "988-crisis-line"
+    ],
+    "category": "crisis-line",
+    "tags": [
+      "indigenous",
+      "crisis",
+      "phone",
+      "24/7",
+      "national",
+      "MMIWG"
+    ],
+    "verification": {
+      "status": "unverified",
+      "lastVerified": null,
+      "verifiedBy": null,
+      "confidence": "high",
+      "notes": "Federal government service. Phone confirmed via multiple sources (Feb 2026).",
+      "fieldsToCheck": []
+    }
+  },
+  {
+    "id": "ab-mental-health-line",
+    "name": "Alberta Mental Health Help Line",
+    "shortName": "AB Mental Health Line",
+    "entryPoint": "direct",
+    "operator": "Recovery Alberta",
+    "description": "Provincial 24/7 mental health crisis line. Confidential crisis intervention, information, and referral to local services.",
+    "phone": "1-877-303-2642",
+    "address": null,
+    "coordinates": null,
+    "isDropOff": false,
+    "isMobile": false,
+    "coverageArea": "provincial",
+    "coverageDescription": "Alberta-wide mental health crisis line",
+    "hours": {
+      "type": "24/7"
+    },
+    "accessibility": "public",
+    "accessNotes": "Anyone can call. Free, confidential, 24/7.",
+    "serves": [
+      "all"
+    ],
+    "services": [
+      "crisis-intervention",
+      "mental-health-support",
+      "referral"
+    ],
+    "transport": false,
+    "transportNotes": null,
+    "referralRequired": false,
+    "pilotProgram": false,
+    "pilotEndDate": null,
+    "status": "active",
+    "parentService": null,
+    "childServices": [],
+    "connections": [
+      "access-247",
+      "988-crisis-line",
+      "distress-line",
+      "family-violence-line"
+    ],
+    "category": "crisis-line",
+    "tags": [
+      "mental-health",
+      "crisis",
+      "phone",
+      "24/7",
+      "provincial"
+    ],
+    "verification": {
+      "status": "unverified",
+      "lastVerified": "2026-02-16",
+      "verifiedBy": null,
+      "confidence": "high",
+      "notes": "Connection to family-violence-line added (Feb 2026). Provincial service confirmed via recoveryalberta.ca.",
       "fieldsToCheck": []
     }
   }
