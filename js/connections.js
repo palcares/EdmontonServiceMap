@@ -66,12 +66,13 @@ var REFERRAL_CHAINS = [
 
 // ── View tabs ──
 var CONN_VIEWS = [
+  { id: 'graph', label: 'Network Graph', icon: 'network' },
   { id: 'ecosystem', label: 'Ecosystem Map', icon: 'gitMerge' },
   { id: 'organizations', label: 'Organizations', icon: 'users' },
   { id: 'directory', label: 'Service Directory', icon: 'layers' }
 ];
 
-var currentConnView = 'ecosystem';
+var currentConnView = 'graph';
 var currentDirCategory = 'all';
 var currentDirAccess = 'all';
 
@@ -80,9 +81,21 @@ function initConnections() {
   container.innerHTML = buildConnectionsPage();
   attachConnectionsHandlers(container);
 
+  // Toggle graph-mode class on conn-page AND tab panel (for layout)
+  var connPage = container.querySelector('.conn-page');
+  if (connPage) connPage.classList.toggle('conn-graph-mode', currentConnView === 'graph');
+  var tabPanel = document.getElementById('tab-connections');
+  if (tabPanel) tabPanel.classList.toggle('conn-graph-active', currentConnView === 'graph');
+
+  // Initialize graph if it's the default view
+  if (currentConnView === 'graph') {
+    var graphRoot = container.querySelector('.conn-graph-container');
+    if (graphRoot) initConnectionsGraph(graphRoot);
+  }
+
   // Time change updates
   document.addEventListener('timechange', function() {
-    // Update all open/closed badges
+    // Update all open/closed badges (non-graph views)
     container.querySelectorAll('[data-svc-id]').forEach(function(el) {
       var svc = getServiceById(el.dataset.svcId);
       if (!svc) return;
@@ -100,12 +113,30 @@ function attachConnectionsHandlers(container) {
   // View tab switching
   container.querySelectorAll('.conn-view-tab').forEach(function(tab) {
     tab.addEventListener('click', function() {
+      // Destroy graph if switching away
+      if (currentConnView === 'graph' && tab.dataset.view !== 'graph') {
+        destroyConnectionsGraph();
+      }
+
       currentConnView = tab.dataset.view;
       container.querySelectorAll('.conn-view-tab').forEach(function(t) { t.classList.remove('active'); });
       tab.classList.add('active');
+
+      // Toggle graph-mode layout
+      var connPage = container.querySelector('.conn-page');
+      if (connPage) connPage.classList.toggle('conn-graph-mode', currentConnView === 'graph');
+      var tabPanel = document.getElementById('tab-connections');
+      if (tabPanel) tabPanel.classList.toggle('conn-graph-active', currentConnView === 'graph');
+
       var viewContainer = container.querySelector('.conn-view-container');
       viewContainer.innerHTML = buildCurrentView();
       attachViewHandlers(container);
+
+      // Initialize graph if switching to it
+      if (currentConnView === 'graph') {
+        var graphRoot = viewContainer.querySelector('.conn-graph-container');
+        if (graphRoot) initConnectionsGraph(graphRoot);
+      }
     });
   });
 
@@ -225,6 +256,7 @@ function buildConnectionsPage() {
 }
 
 function buildCurrentView() {
+  if (currentConnView === 'graph') return '<div class="conn-graph-container"></div>';
   if (currentConnView === 'ecosystem') return buildEcosystemView();
   if (currentConnView === 'organizations') return buildOrganizationsView();
   if (currentConnView === 'directory') return buildDirectoryView();

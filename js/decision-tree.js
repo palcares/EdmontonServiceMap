@@ -70,7 +70,7 @@ var DECISION_TREE = {
     actions: [
       "George Spady Detox (Aurora Centre) \u2014 24/7 walk-in for intoxicated adults. 15625 Stony Plain Rd NW",
       "If the person also needs crisis stabilization \u2192 George Spady Aurora Centre (same location)",
-      "Hope Mission (Herb Jamieson) \u2014 24/7 emergency shelter for adult men. 10014 105A Ave NW",
+      "Hope Mission (Herb Jamieson) \u2014 24/7 emergency shelter for adult men. 10014 105A Ave NW. Phone: 780-422-2018",
       "If medical emergency (unresponsive, difficulty breathing) \u2192 call 911"
     ]
   },
@@ -101,10 +101,12 @@ var DECISION_TREE = {
       type: "you-transport",
       text: "You are providing transport. Check hours before going \u2014 some locations are not 24/7."
     },
-    primaryServices: ["hope-mission", "boyle-street", "yess"],
-    secondaryServices: ["george-spady-detox"],
+    primaryServices: ["hope-mission", "mustard-seed-central", "boyle-street", "yess"],
+    secondaryServices: ["mustard-seed-strathcona", "george-spady-detox"],
     actions: [
-      "Adult men \u2192 Hope Mission (Herb Jamieson Centre), walk-in 24/7. 10014 105A Ave NW. Phone: 780-429-3470",
+      "Adult men \u2192 Hope Mission (Herb Jamieson Centre), walk-in 24/7. 10014 105A Ave NW. Phone: 780-422-2018",
+      "All adults \u2192 Mustard Seed Central, walk-in 24/7. 124 beds. 9526 106 Ave NW. Phone: 833-448-4673",
+      "All adults (south side) \u2192 Mustard Seed Strathcona, walk-in 24/7. 45 beds. 10050 81 Ave NW",
       "All adults (daytime) \u2192 Boyle Street (King Thunderbird Centre), M-F 8am\u20134pm, Sat-Sun 9am\u20133pm. 10010 107A Ave NW",
       "Youth 15\u201321 \u2192 YESS, walk-in 24/7. 9310 82 Ave NW. Phone: 780-468-7070",
       "If intoxicated \u2192 George Spady Detox, walk-in 24/7. 15625 Stony Plain Rd NW"
@@ -119,10 +121,11 @@ var DECISION_TREE = {
       type: "you-transport",
       text: "You are providing transport. YESS is the primary youth shelter destination."
     },
-    primaryServices: ["yess"],
+    primaryServices: ["yess", "ihuman"],
     secondaryServices: ["access-247", "988-crisis-line"],
     actions: [
       "YESS (Youth Empowerment & Support Services) \u2014 emergency shelter ages 15\u201321, daytime programs 15\u201324. Walk-in 24/7. 9310 82 Ave NW. Phone: 780-468-7070",
+      "iHuman Youth Society \u2014 120 daytime shelter spaces for vulnerable youth. Arts-based programming. 10231 107 St NW. Phone: 780-477-6648",
       "For mental health concerns \u2192 Access 24/7 serves youth too. Phone: 780-424-2424",
       "If suicidal crisis \u2192 call or text 988 (24/7)",
       "CDT (211 press 3) can also help transport youth to YESS"
@@ -190,7 +193,7 @@ var DECISION_TREE = {
       text: "PACT \u2014 CAN TRANSPORT to hospital under Mental Health Act. CREMS \u2014 CAN TRANSPORT to hospital or crisis services. CDT \u2014 CAN TRANSPORT (voluntary)."
     },
     primaryServices: ["pact", "crems", "cdt"],
-    secondaryServices: ["access-247", "988-crisis-line"],
+    secondaryServices: ["access-247", "988-crisis-line", "distress-line"],
     actions: [
       "PACT (Police & Crisis Team) \u2014 EPS officer + mental health therapist. 24/7. Can apprehend under Mental Health Act. Dispatched through EPS/AHS. Phone: 780-424-2424",
       "CREMS (Crisis Response & EMS) \u2014 paramedic + mental health therapist. 24/7. Dispatched through AHS. Phone: 780-424-2424",
@@ -279,11 +282,12 @@ var DECISION_TREE = {
       type: "phone-only",
       text: "These are phone-based services. If you need a team sent, call Access 24/7 or 211 press 3."
     },
-    primaryServices: ["988-crisis-line", "access-247"],
+    primaryServices: ["988-crisis-line", "access-247", "distress-line"],
     secondaryServices: ["cdt"],
     actions: [
       "988 \u2014 Suicide Crisis Helpline. Call or text. 24/7. Free and confidential.",
       "780-424-2424 \u2014 Access 24/7. Mental health & addiction support by phone 24/7. Can also dispatch PACT or CREMS.",
+      "780-482-4357 \u2014 Edmonton Distress Line (CMHA). 24/7 confidential phone support for anyone in distress.",
       "211 press 3 \u2014 Crisis Diversion Team for mobile response. 24/7.",
       "If immediate danger \u2192 call 911"
     ]
@@ -298,10 +302,11 @@ var DECISION_TREE = {
       text: "Call 211 press 3 to get a mobile team with transport capability sent to your location."
     },
     primaryServices: ["cdt", "access-247"],
-    secondaryServices: ["988-crisis-line"],
+    secondaryServices: ["988-crisis-line", "distress-line"],
     actions: [
       "211 press 3 \u2014 Crisis Diversion Team. 24/7. They come to you and CAN TRANSPORT.",
       "780-424-2424 \u2014 Access 24/7. Phone support + can dispatch specialized teams.",
+      "780-482-4357 \u2014 Edmonton Distress Line (CMHA). 24/7 confidential support.",
       "988 \u2014 if the concern is suicidal thoughts or self-harm. Call or text, 24/7.",
       "911 \u2014 if there is immediate danger to anyone"
     ]
@@ -393,7 +398,7 @@ var DECISION_TREE = {
       text: "CDT \u2014 CAN TRANSPORT. They\u2019ll come to you and can take the person to George Spady Detox or other services."
     },
     primaryServices: ["cdt", "george-spady-detox"],
-    secondaryServices: ["hope-mission"],
+    secondaryServices: ["hope-mission", "mustard-seed-central"],
     actions: [
       "Call 211, press 3 \u2014 Crisis Diversion Team will come to you. 24/7. CAN TRANSPORT.",
       "They can take the person to George Spady Detox (24/7) or other appropriate services",
@@ -411,11 +416,12 @@ var DECISION_TREE = {
       text: "Start by calling. The operator will help you figure out what to do next."
     },
     primaryServices: ["access-247", "cdt", "988-crisis-line"],
-    secondaryServices: [],
+    secondaryServices: ["distress-line"],
     actions: [
       "Call 780-424-2424 (Access 24/7) \u2014 mental health professionals available 24/7 by phone. They\u2019ll guide you.",
       "Call 211, press 3 (CDT) \u2014 if you need someone to come to the location. 24/7. CAN TRANSPORT.",
       "Call or text 988 \u2014 if the person is talking about suicide or self-harm. 24/7.",
+      "Call 780-482-4357 (Distress Line) \u2014 CMHA Edmonton, 24/7 confidential support for anyone in distress.",
       "You don\u2019t need to know the system \u2014 these numbers will connect you to the right help",
       "Stay calm, give space, don\u2019t leave them alone if possible"
     ]
@@ -571,7 +577,7 @@ function highlightPhoneNumbers(text) {
   return text
     .replace(/\b(911|988|211)\b/g, '<span class="result-phone-highlight">$1</span>')
     .replace(/(\d{3}-\d{3}-\d{4})/g, '<span class="result-phone-highlight">$1</span>')
-    .replace(/(780-424-2424|780-468-7070|587-686-7788|780-429-3470|780-735-4111|780-407-8822|780-496-4567|780-423-4567)/g, '<span class="result-phone-highlight">$1</span>');
+    .replace(/(780-424-2424|780-468-7070|780-784-6150|780-422-2018|780-735-4111|780-407-8822|780-496-4567|780-423-4567|780-482-4357|833-448-4673|780-477-6648|780-442-4900)/g, '<span class="result-phone-highlight">$1</span>');
 }
 
 // ── Service Cards ──
